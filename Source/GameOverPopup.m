@@ -30,15 +30,16 @@
 
 - (id)init
 {
-  self = [super init];
+    self = [super init];
   
-  if (self)
-  {
-    self.scoreBoxes = [[NSMutableArray  alloc] initWithCapacity:categoriesCount];
-    self.currentCategoryIndex = 0;
-  }
-  
-  return self;
+    if (self)
+    {
+      // Init scoreBoxes 
+      self.scoreBoxes = [[NSMutableArray  alloc] initWithCapacity:categoriesCount];
+      self.currentCategoryIndex = 0;
+    }
+   
+    return self;
 }
 
 - (void)onEnter
@@ -50,6 +51,7 @@
     _gameOverStrings = @[@"You Missed One",@"NO. Kill them ALL!",@"Don't Miss!",@"My Grandma Can Do Better",@"You Must Not Hate Birds",@"MORE KILL. LESS MISS.",@"Are You Kidding?",@"How About No?"];
     
     // Create a random index
+    // MOTHER FUCKING ARC4RANDOM BABY
     randomIndex = (arc4random() % [_gameOverStrings count]);
     
     // Index into array and set string
@@ -61,101 +63,121 @@
 
 # pragma mark - Scores
 
-- (BOOL)isNewRecord:(NSString *)categoryName {
-  float record = [[NSUserDefaults standardUserDefaults] floatForKey:categoryName];
-  float currentScore = [[self.mainScene valueForKey:categoryName] floatValue];
+- (BOOL)isNewRecord:(NSString *)categoryName
+{
+    // Grab record from high score userdefaults
+    float record = [[NSUserDefaults standardUserDefaults] floatForKey:categoryName];
+    
+    // Grab current score from gameplay
+    float currentScore = [[self.mainScene valueForKey:categoryName] floatValue];
   
-  if (currentScore > record) {
-    // set new highscore in NSUserDefaults
-    [[NSUserDefaults standardUserDefaults] setFloat:currentScore forKey:categoryName];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    return TRUE;
-  } else {
+    // If current score is greater then the record, set it as the new record
+    if (currentScore > record) {
+      // set new highscore in NSUserDefaults
+      [[NSUserDefaults standardUserDefaults] setFloat:currentScore forKey:categoryName];
+      [[NSUserDefaults standardUserDefaults] synchronize];
+      return TRUE;
+    }   else {
+      return FALSE;
+    }
+
     return FALSE;
-  }
-
-  return FALSE;
 }
 
-- (void)updateHighScoreLabel:(NSString *)categoryName {
-  id highScore = [[NSUserDefaults standardUserDefaults] objectForKey:categoryName];
-  if (highScore) {
-    _highScoreLabel.string = [NSString stringWithFormat:@"Best: %@", highScore];
-  }
+- (void)updateHighScoreLabel:(NSString *)categoryName
+{
+    // Update the highscore label with the new record
+    id highScore = [[NSUserDefaults standardUserDefaults] objectForKey:categoryName];
+    if (highScore)
+      _highScoreLabel.string = [NSString stringWithFormat:@"Best: %@", highScore];
 }
 
-- (void)loadScoreBox:(NSInteger)index {
-  NSString *category = [self enumToString:(CategoryName)index];
+- (void)loadScoreBox:(NSInteger)index
+{
+    NSString *category = [self enumToString:(CategoryName)index];
   
-  if (index < [self.scoreBoxes count]) {
-    _scoreBox = [self.scoreBoxes objectAtIndex:index];
-  } else {
-    _scoreBox = (CCNode *)[CCBReader load:@"ScoreBox" owner:self];
-    [self.scoreBoxes addObject:_scoreBox];
-  }
+    if (index < [self.scoreBoxes count]) {
+      _scoreBox = [self.scoreBoxes objectAtIndex:index];
+    } else {
+      _scoreBox = (CCNode *)[CCBReader load:@"ScoreBox" owner:self];
+      [self.scoreBoxes addObject:_scoreBox];
+    }
   
-  _scoreBox.positionType = CCPositionTypeNormalized;
-  _scoreBox.position = ccp(0.5, 0.8);
+    // Position the scoreBox
+    _scoreBox.positionType = CCPositionTypeNormalized;
+    _scoreBox.position = ccp(0.5, 0.8);
   
-  _categoryNameLabel.string = [category uppercaseString];
-  _currentScore.string = [NSString stringWithFormat:@"%@", [self.mainScene valueForKey:category]];
+    // Change the category label to uppercase
+    _categoryNameLabel.string = [category uppercaseString];
+    _currentScore.string = [NSString stringWithFormat:@"%@", [self.mainScene valueForKey:category]];
   
-  if ([self isNewRecord:category]) {
-    _newHighScoreLabel.visible = TRUE;
-  }
+    // Show high score label if new high score
+    if ([self isNewRecord:category]) {
+      _newHighScoreLabel.visible = TRUE;
+    }
   
-  [self updateHighScoreLabel:category];
-  [self addChild:_scoreBox];
+    // Update the highscore label and add the score box to parent
+    [self updateHighScoreLabel:category];
+    [self addChild:_scoreBox];
 }
 
 # pragma mark - Restart game
 
-- (void)restartGame {
-  [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
+- (void)restartGame
+{
+    // Replay the game when pressed
+    [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
 
 # pragma mark - Enum Functions
 
-- (NSString *)enumToString:(CategoryName)name {
-  switch (name) {
-    case score:
-      return @"score";
-      break;
-    case pps:
-      return @"pps";
-      break;
-    default:
-      return @"score";
-  }
+- (NSString *)enumToString:(CategoryName)name
+{
+    // Swtich to determine which label to show
+    switch (name) {
+      case score:
+        return @"score";
+        break;
+      case pps:
+        return @"pps";
+        break;
+      default:
+        return @"score";
+    }
 }
 
 # pragma mark - Toggle score categories
 
-- (void)previousCategory {
-  [_scoreBox removeFromParent];
-  NSInteger newIndex = --self.currentCategoryIndex;
-  // go to last index
-  if (newIndex < 0) {
-    newIndex = self.currentCategoryIndex = categoriesCount-1;
-  }
+- (void)previousCategory
+{
+    // Remove the score box from parent
+    [_scoreBox removeFromParent];
+    
+    // Decrement the index
+    NSInteger newIndex = --self.currentCategoryIndex;
+    
+    // Go to last index
+    if (newIndex < 0)
+      newIndex = self.currentCategoryIndex = categoriesCount-1;
   
-  [self loadScoreBox:newIndex];
+    // Then reload the score box
+    [self loadScoreBox:newIndex];
 }
 
-- (void)nextCategory {
-  [_scoreBox removeFromParent];
-  NSInteger newIndex = ++self.currentCategoryIndex;
-  // go to first index
-  if (newIndex >= categoriesCount) {
-    newIndex = self.currentCategoryIndex = 0;
-  }
+- (void)nextCategory
+{
+    // Remove the current score box
+    [_scoreBox removeFromParent];
+    
+    // Increment the index of scorebox
+    NSInteger newIndex = ++self.currentCategoryIndex;
+    
+    // Go to first index
+    if (newIndex >= categoriesCount)
+      newIndex = self.currentCategoryIndex = 0;
   
-  [self loadScoreBox:newIndex];
+    // Load the new score box
+    [self loadScoreBox:newIndex];
 }
-
-
-
-
-
 
 @end
