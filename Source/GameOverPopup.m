@@ -9,18 +9,31 @@
 #import "GameOverPopup.h"
 #import "MainScene.h"
 
-@implementation GameOverPopup {
+@implementation GameOverPopup
+{
+  // Labels
   CCLabelTTF *_currentScore;
   CCLabelTTF *_highScoreLabel;
   CCLabelTTF *_newHighScoreLabel;
   CCLabelTTF *_categoryNameLabel;
+  CCLabelTTF *_gameOverLabel;
+    
+  // Scores
   CCNode *_scoreBox;
+    
+  // Label Array
+  NSArray *_gameOverStrings;
+    
+  // Random Index
+  int randomIndex;
 }
 
-- (id)init {
+- (id)init
+{
   self = [super init];
   
-  if (self) {
+  if (self)
+  {
     self.scoreBoxes = [[NSMutableArray  alloc] initWithCapacity:categoriesCount];
     self.currentCategoryIndex = 0;
   }
@@ -28,10 +41,22 @@
   return self;
 }
 
-- (void)onEnter {
-  [super onEnter];
-  
-  [self loadScoreBox:self.currentCategoryIndex];
+- (void)onEnter
+{
+    [super onEnter];
+    
+    // Initialize game over string array
+    _gameOverStrings = [[NSArray alloc] init];
+    _gameOverStrings = @[@"You Missed One",@"NO. Kill them ALL!",@"Don't Miss!",@"My Grandma Can Do Better",@"You Must Not Hate Birds",@"MORE KILL. LESS MISS.",@"Are You Kidding?",@"How About No?"];
+    
+    // Create a random index
+    randomIndex = (arc4random() % [_gameOverStrings count]);
+    
+    // Index into array and set string
+    _gameOverLabel.string = _gameOverStrings[randomIndex];
+    
+    // Load Score Box
+    [self loadScoreBox:self.currentCategoryIndex];
 }
 
 # pragma mark - Scores

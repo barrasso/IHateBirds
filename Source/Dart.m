@@ -24,7 +24,7 @@ const NSInteger MULTISHOT_BONUS = 10;
   [super onEnter];
 
   // Dart Streak
-  self.streak = [CCMotionStreak streakWithFade:0.7f minSeg:50 width:self.contentSizeInPoints.width color:[CCColor colorWithRed:147 green:95 blue:245 alpha:0.46f] textureFilename:@"ccbResources/ccbParticleStars.png"];
+  self.streak = [CCMotionStreak streakWithFade:0.7f minSeg:50 width:self.contentSizeInPoints.width color:[CCColor colorWithRed:236 green:236 blue:236 alpha:0.46f] textureFilename:@"ccbResources/ccbParticleStars.png"];
   self.streak.position = self.position;
   [self.parent addChild:self.streak z:2];
 
@@ -36,9 +36,9 @@ const NSInteger MULTISHOT_BONUS = 10;
     // update position of streak
     self.streak.position = self.position;
     
+      // If the dart hit the side of the screen, remove it
     if ([self didHitSide]) {
-      [self.mainScene gameOver];
-      // [self removeFromParent];
+        [self removeFromParent];
     }
   }
 }

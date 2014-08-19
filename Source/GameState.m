@@ -10,7 +10,9 @@
 
 @implementation GameState
 
-+ (GameState *)sharedInstance {
+// GameState Singleton
++ (GameState *)sharedInstance
+{
   static dispatch_once_t once;
   static GameState *instance;
   dispatch_once(&once, ^{

@@ -10,8 +10,10 @@
 
 @interface GameState : NSObject
 
+// Tutorial Mode
 @property (nonatomic, assign) BOOL tutorialModeOn;
 
+// Singleton
 + (GameState *)sharedInstance;
 
 @end

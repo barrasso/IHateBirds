@@ -137,8 +137,6 @@
 						<real>0.85000002384185791</real>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 			</dict>
 			<dict>
 				<key>UUID</key>
@@ -208,7 +206,7 @@
 				<key>displayName</key>
 				<string>CCLabelTTF - Game Over</string>
 				<key>memberVarAssignmentName</key>
-				<string></string>
+				<string>_gameOverLabel</string>
 				<key>memberVarAssignmentType</key>
 				<integer>1</integer>
 				<key>properties</key>
@@ -276,7 +274,7 @@
 						<string>Text</string>
 						<key>value</key>
 						<array>
-							<string>More Birds Must Die</string>
+							<string>You Let A Bird Go</string>
 							<false/>
 						</array>
 					</dict>
@@ -933,7 +931,7 @@
 								<key>value</key>
 								<array>
 									<real>0.10000000149011612</real>
-									<real>0.5</real>
+									<real>1</real>
 									<integer>1</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -1427,7 +1425,7 @@
 								<key>value</key>
 								<array>
 									<real>0.89999997615814209</real>
-									<real>0.5</real>
+									<real>1</real>
 									<integer>1</integer>
 									<integer>2</integer>
 									<integer>2</integer>
@@ -2555,7 +2553,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.20000000298023224</real>
+							<real>0.25</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -2979,8 +2977,8 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
+					<real>375</real>
 					<real>300</real>
-					<real>280</real>
 					<integer>0</integer>
 					<integer>0</integer>
 				</array>
@@ -3010,6 +3008,8 @@
 				</array>
 			</dict>
 		</array>
+		<key>selected</key>
+		<true/>
 	</dict>
 	<key>notes</key>
 	<array/>

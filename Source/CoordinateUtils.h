@@ -10,8 +10,13 @@
 
 @interface CoordinateUtils : NSObject
 
+// Calculate Slope
 + (float)slopeBetweenFirstPoint:(CGPoint)first secondPoint:(CGPoint)second;
+
+// Y Intercept
 + (float)yInterceptWithSlope:(float)slope coordinate:(CGPoint)coordinate;
+
+// Calculate Angle
 + (float)angleBetweenStartPoint:(CGPoint)start endPoint:(CGPoint)end;
 
 @end
