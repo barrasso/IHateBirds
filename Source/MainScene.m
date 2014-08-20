@@ -260,6 +260,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   [[_physicsNode space] addPostStepBlock:^{
     [self fadeOut:dart];
     [self fadeOut:enemy];
+    [self loadBloodyExplosion:enemy];
     [enemy beginDissolve];
     
       // Fade out both objects on a timer
@@ -349,6 +350,20 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Add popup to mainscene
   [self addChild:popover];
+}
+
+#pragma mark - Explosions
+
+- (void)loadBloodyExplosion:(CCNode *)enemy
+{
+    // Load the bloody effect
+    CCNode *bloodExplosion = (CCNode *)[CCBReader load:@"BloodyExplosion"];
+    
+    // Place bloody effect on enemy's position
+    bloodExplosion.position = enemy.position;
+    
+    // Add bloody effect to same parent as enemy
+    [enemy.parent addChild:bloodExplosion];
 }
 
 - (void)triggerExplosion
