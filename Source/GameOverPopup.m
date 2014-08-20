@@ -48,7 +48,7 @@
     
     // Initialize game over string array
     _gameOverStrings = [[NSArray alloc] init];
-    _gameOverStrings = @[@"You Missed One",@"NO. Kill them ALL!",@"Don't Miss!",@"My Grandma Can Do Better",@"You Must Not Hate Birds",@"MORE KILL. LESS MISS.",@"Are You Kidding?",@"How About No?"];
+    _gameOverStrings = @[@"You Suck"];
     
     // Create a random index
     // MOTHER FUCKING ARC4RANDOM BABY
@@ -105,7 +105,7 @@
   
     // Position the scoreBox
     _scoreBox.positionType = CCPositionTypeNormalized;
-    _scoreBox.position = ccp(0.5, 0.8);
+    _scoreBox.position = ccp(0.5, 0.7);
   
     // Change the category label to uppercase
     _categoryNameLabel.string = [category uppercaseString];
