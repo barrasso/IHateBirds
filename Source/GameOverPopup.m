@@ -16,13 +16,9 @@
   CCLabelTTF *_highScoreLabel;
   CCLabelTTF *_newHighScoreLabel;
   CCLabelTTF *_categoryNameLabel;
-  CCLabelTTF *_gameOverLabel;
     
   // Scores
   CCNode *_scoreBox;
-    
-  // Label Array
-  NSArray *_gameOverStrings;
     
   // Random Index
   int randomIndex;
@@ -45,17 +41,6 @@
 - (void)onEnter
 {
     [super onEnter];
-    
-    // Initialize game over string array
-    _gameOverStrings = [[NSArray alloc] init];
-    _gameOverStrings = @[@"You Suck"];
-    
-    // Create a random index
-    // MOTHER FUCKING ARC4RANDOM BABY
-    randomIndex = (arc4random() % [_gameOverStrings count]);
-    
-    // Index into array and set string
-    _gameOverLabel.string = _gameOverStrings[randomIndex];
     
     // Load Score Box
     [self loadScoreBox:self.currentCategoryIndex];
@@ -105,7 +90,7 @@
   
     // Position the scoreBox
     _scoreBox.positionType = CCPositionTypeNormalized;
-    _scoreBox.position = ccp(0.5, 0.7);
+    _scoreBox.position = ccp(0.5, 0.5);
   
     // Change the category label to uppercase
     _categoryNameLabel.string = [category uppercaseString];

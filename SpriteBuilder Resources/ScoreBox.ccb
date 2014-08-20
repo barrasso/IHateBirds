@@ -176,7 +176,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>fonts/Amatic-Bold.ttf</string>
+						<string>Georgia</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -457,7 +457,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>fonts/Amatic-Bold.ttf</string>
+								<string>Georgia</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -596,6 +596,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
