@@ -289,7 +289,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   [_physicsNode addChild: enemy];
   
     // Apply force to enemy
-  CGPoint force = ccpMult(forceDirection, 12000);
+  CGPoint force = ccpMult(forceDirection, 11000);
   [enemy.physicsBody applyForce:force];
 }
 

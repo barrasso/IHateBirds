@@ -171,7 +171,7 @@ static const NSInteger STARTING_POINT_VALUE = 3;
   
   self.anchorPoint = ccp(0.5, 0.5);
   self.positionType = CCPositionTypeNormalized;
-  self.position = ccp(0.525, 0.70);
+  self.position = ccp(0.53, 0.70);
 }
 
 # pragma mark - Colors
