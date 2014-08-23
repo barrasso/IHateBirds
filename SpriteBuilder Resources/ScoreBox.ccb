@@ -176,7 +176,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>fonts/Capture_it_2.ttf</string>
+						<string>Futura-CondensedExtraBold</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -459,7 +459,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>fonts/Capture_it_2.ttf</string>
+								<string>Futura-CondensedMedium</string>
 							</dict>
 							<dict>
 								<key>name</key>

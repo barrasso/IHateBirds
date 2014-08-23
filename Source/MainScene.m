@@ -23,6 +23,9 @@
     CCLabelTTF *_scoreLabel;
     CCLabelTTF *_bonusPointsLabel;
   
+    // Bonus
+    CCNode *_bonusNode;
+    
     // Tutorial
     CCNode *_tutorialNode;
 
@@ -135,13 +138,17 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 
 - (void)displayBonusLabel:(NSString *)type points:(NSInteger)points
 {
+    // Show bonus node;
+    _bonusNode.visible = TRUE;
+    
     // Set bonus points label with current bonus points
-  _bonusPointsLabel.string = [NSString stringWithFormat:@"%@ +%li", type, (long)points];
+  _bonusPointsLabel.string = [NSString stringWithFormat:@"+%li", (long)points];
     // Show bonus points label
   _bonusPointsLabel.visible = TRUE;
   
     // Show bonus points label on timer
   [self scheduleBlock:^(CCTimer *timer) {
+      _bonusNode.visible = FALSE;
     _bonusPointsLabel.visible = FALSE;
   } delay:1.5];
 }
@@ -228,7 +235,8 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   // Determine if dart is colliding with already-hit enemy (for extra points)
   if (enemy.isShot)
   {
-    [self displayBonusLabel:@"OWNED" points:PINCUSHION_BONUS];
+    _bonusNode.position = ccp(enemy.positionInPoints.x, enemy.positionInPoints.y - 25.f) ;
+    [self displayBonusLabel:@"PIN-CUSHION" points:PINCUSHION_BONUS];
     points = PINCUSHION_BONUS;
   }
     // Give regular amount of points
@@ -242,6 +250,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   // Determine if dart has hit different enemy before (for extra points)
   if (dart.hasHitEnemy)
   {
+    _bonusNode.position = ccp(enemy.positionInPoints.x, enemy.positionInPoints.y - 25.f) ;
     [self displayBonusLabel:@"MULTI-KILL" points:MULTISHOT_BONUS];
     points += MULTISHOT_BONUS;
   }
