@@ -20,6 +20,7 @@
     CCPhysicsNode *_physicsNode;
     
     // Labels
+    CCLabelTTF *_waveLabel;
     CCLabelTTF *_scoreLabel;
     CCLabelTTF *_bonusPointsLabel;
   
@@ -34,6 +35,9 @@
     
     // Timer
     float _timer;
+    
+    // Wave Number
+    int waveNumber;
 }
 
 // Maximum Amount of enemies to spawn
@@ -73,6 +77,12 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   
     // Set Score observer to 0
     [self addObserver:self forKeyPath:@"score" options:0 context:NULL];
+    
+    // Set wave label to invisible
+    _waveLabel.visible = FALSE;
+    
+    // Set wave number to 0
+    waveNumber = 0;
 }
 
 - (void)onEnter
@@ -104,12 +114,116 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
       // Increment timer
     _timer += delta;
       
-      // If there aren't maximum amount of enemies
-    if (self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES && self.currentEnemyCount >= 0)
+      // Round 1
+      // After 0 seconds, spawn 2 stupid birds
+    if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES) && (self.currentEnemyCount >= 0) && (_timer < 20.f))
+    {
+        // Show the Wave Label once
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ {
+            
+            // Increment wave number
+            waveNumber++;
+            
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:1.0f];
+        });
         
-        // Spawn an enemy
-      [self spawnEnemy];
+        // Continue spawning enemies
+        [self spawnEnemy];
+    }
+      
+      // Round 2
+      // After 20 seconds, spawn 3 stupid birds
+    else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 1) && (self.currentEnemyCount >= 0) && (_timer > 20.f) && (_timer < 40.f))
+    {
+        // Show the Wave Label once
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ {
+            
+            // Increment wave number
+            waveNumber++;
+            
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:1.0f];
+        });
+        
+        // Continue spawning enemies
+        [self spawnEnemy];
+    }
+      
+      // Round 3
+      // After 40 seconds, spawn 4 stupid birds
+    else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 2) && (self.currentEnemyCount >= 0) && (_timer > 40.f) && (_timer < 60.f))
+    {
+        // Show the Wave Label once
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ {
+            
+            // Increment wave number
+            waveNumber++;
+            
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:2.0f];
+        });
+        
+        // Continue spawning enemies
+        [self spawnEnemy];
+    }
+      
+      // Round 4
+      // After 60 seconds, spawn 5 stupid birds
+    else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 3) && (self.currentEnemyCount >= 0) && (_timer > 60.f))
+    {
+        // Show the Wave Label once
+        static dispatch_once_t once;
+        dispatch_once(&once, ^ {
+            
+            // Increment wave number
+            waveNumber++;
+            
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:2.0f];
+        });
+        
+        // Continue spawning enemies
+        [self spawnEnemy];
+    }
   }
+    
+    CCLOG(@"%f",_timer);
 }
 
 - (void)onExit
@@ -298,7 +412,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   [_physicsNode addChild: enemy];
   
     // Apply force to enemy
-  CGPoint force = ccpMult(forceDirection, 11000);
+  CGPoint force = ccpMult(forceDirection, 7500);
   [enemy.physicsBody applyForce:force];
 }
 
