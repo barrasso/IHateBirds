@@ -106,12 +106,17 @@
     [self addChild:_scoreBox];
 }
 
-# pragma mark - Restart game
+# pragma mark - Selectors
 
 - (void)restartGame
 {
     // Replay the game when pressed
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
+}
+
+- (void)openStore
+{
+    // Open the in game store
 }
 
 # pragma mark - Enum Functions
