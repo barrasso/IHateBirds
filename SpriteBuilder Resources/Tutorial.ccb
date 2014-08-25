@@ -393,7 +393,7 @@ all the stupid birds</string>
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>fonts/Qikki-Reg/Qarmic_sans_Abridged.ttf</string>
+						<string>fonts/Cloudy With a Chance of Love.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -532,6 +532,8 @@ all the stupid birds</string>
 						</array>
 					</dict>
 				</array>
+				<key>selected</key>
+				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

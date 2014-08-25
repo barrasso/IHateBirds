@@ -83,7 +83,7 @@
 									<key>value</key>
 									<array>
 										<real>0.5</real>
-										<real>0.15000000596046448</real>
+										<real>0.11923076957464218</real>
 									</array>
 								</dict>
 							</array>
@@ -129,7 +129,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>0.15000000596046448</real>
+							<real>0.11923076957464218</real>
 							<integer>1</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -176,7 +176,7 @@
 						<key>type</key>
 						<string>FontTTF</string>
 						<key>value</key>
-						<string>Futura-CondensedExtraBold</string>
+						<string>fonts/Cloudy With a Chance of Love.ttf</string>
 					</dict>
 					<dict>
 						<key>name</key>
@@ -185,7 +185,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>80</real>
+							<real>50</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -459,7 +459,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>Futura-CondensedMedium</string>
+								<string>fonts/Cloudy With a Chance of Love.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -468,7 +468,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>30</real>
+									<real>25</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -639,8 +639,8 @@
 								<string>Position</string>
 								<key>value</key>
 								<array>
-									<real>0.5</real>
-									<real>-22</real>
+									<real>0.0</real>
+									<real>28</real>
 									<integer>0</integer>
 									<integer>2</integer>
 									<integer>0</integer>
@@ -687,7 +687,7 @@
 								<key>type</key>
 								<string>FontTTF</string>
 								<key>value</key>
-								<string>fonts/Amatic-Bold.ttf</string>
+								<string>fonts/comic-neue-1.1/ComicNeue-Light.ttf</string>
 							</dict>
 							<dict>
 								<key>name</key>
@@ -696,7 +696,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>25</real>
+									<real>20</real>
 									<integer>0</integer>
 								</array>
 							</dict>
