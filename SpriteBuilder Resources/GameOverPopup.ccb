@@ -988,7 +988,7 @@
 									<key>easing</key>
 									<dict>
 										<key>type</key>
-										<integer>1</integer>
+										<integer>10</integer>
 									</dict>
 									<key>name</key>
 									<string>position</string>
