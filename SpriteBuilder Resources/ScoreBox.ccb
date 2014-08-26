@@ -234,19 +234,6 @@
 					</dict>
 					<dict>
 						<key>name</key>
-						<string>color</string>
-						<key>type</key>
-						<string>Color3</string>
-						<key>value</key>
-						<array>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>0.0</real>
-							<real>1</real>
-						</array>
-					</dict>
-					<dict>
-						<key>name</key>
 						<string>dimensions</string>
 						<key>type</key>
 						<string>Size</string>
@@ -545,19 +532,6 @@
 							</dict>
 							<dict>
 								<key>name</key>
-								<string>color</string>
-								<key>type</key>
-								<string>Color3</string>
-								<key>value</key>
-								<array>
-									<real>0.0</real>
-									<real>0.0</real>
-									<real>0.0</real>
-									<real>1</real>
-								</array>
-							</dict>
-							<dict>
-								<key>name</key>
 								<string>dimensions</string>
 								<key>type</key>
 								<string>Size</string>
@@ -778,7 +752,7 @@
 								<string>Color3</string>
 								<key>value</key>
 								<array>
-									<real>0.0</real>
+									<real>0.51697975397109985</real>
 									<real>0.0</real>
 									<real>0.0</real>
 									<real>1</real>
@@ -889,6 +863,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -971,8 +947,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>

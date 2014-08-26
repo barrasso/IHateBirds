@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0430C0A719AD497800C2C191 /* Images1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430C0A619AD497800C2C191 /* Images1.xcassets */; };
 		043CFF4519AC32E300C70879 /* PausePopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 043CFF4419AC32E300C70879 /* PausePopup.m */; };
 		04F9DC67198EAC1400FE1199 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9DC66198EAC1400FE1199 /* Images.xcassets */; };
-		04F9DC6A198EAC1C00FE1199 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9DC69198EAC1C00FE1199 /* Images.xcassets */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -64,10 +64,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0430C0A619AD497800C2C191 /* Images1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images1.xcassets; sourceTree = "<group>"; };
 		043CFF4319AC32E300C70879 /* PausePopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PausePopup.h; path = Source/PausePopup.h; sourceTree = "<group>"; };
 		043CFF4419AC32E300C70879 /* PausePopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PausePopup.m; path = Source/PausePopup.m; sourceTree = "<group>"; };
 		04F9DC66198EAC1400FE1199 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FirstGame/Images.xcassets; sourceTree = SOURCE_ROOT; };
-		04F9DC69198EAC1C00FE1199 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -231,7 +231,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
-				04F9DC69198EAC1C00FE1199 /* Images.xcassets */,
+				0430C0A619AD497800C2C191 /* Images1.xcassets */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -290,9 +290,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B77F1B2D17B978D7009739AE /* FirstGame */ = {
+		B77F1B2D17B978D7009739AE /* IHateBirds */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "FirstGame" */;
+			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "IHateBirds" */;
 			buildPhases = (
 				D2E0167A18D782EC00927430 /* Run Script */,
 				B77F1B2A17B978D7009739AE /* Sources */,
@@ -304,7 +304,7 @@
 			dependencies = (
 				B7378989180764180076A88C /* PBXTargetDependency */,
 			);
-			name = FirstGame;
+			name = IHateBirds;
 			productName = Example;
 			productReference = B77F1B2E17B978D7009739AE /* I Hate Birds.app */;
 			productType = "com.apple.product-type.application";
@@ -328,7 +328,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "FirstGame" */;
+			buildConfigurationList = B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "IHateBirds" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -346,7 +346,7 @@
 			);
 			projectRoot = "";
 			targets = (
-				B77F1B2D17B978D7009739AE /* FirstGame */,
+				B77F1B2D17B978D7009739AE /* IHateBirds */,
 			);
 		};
 /* End PBXProject section */
@@ -377,7 +377,7 @@
 				B71F591A188484E7003F4D28 /* Settings@2x.png in Resources */,
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
-				04F9DC6A198EAC1C00FE1199 /* Images.xcassets in Resources */,
+				0430C0A719AD497800C2C191 /* Images1.xcassets in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
@@ -564,7 +564,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "FirstGame" */ = {
+		B77F1B2917B978D7009739AE /* Build configuration list for PBXProject "IHateBirds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDC17B978D8009739AE /* Debug */,
@@ -573,7 +573,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "FirstGame" */ = {
+		B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "IHateBirds" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B77F1CDF17B978D8009739AE /* Debug */,

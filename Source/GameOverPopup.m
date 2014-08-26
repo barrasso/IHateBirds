@@ -95,7 +95,11 @@
     // Change the category label to uppercase
     _categoryNameLabel.string = [category uppercaseString];
     _currentScore.string = [NSString stringWithFormat:@"%@", [self.mainScene valueForKey:category]];
-  
+    
+    // Update multikill and pin kill labels
+    CCLOG(@"MK: %ld", (long)[self.mainScene multiKills]);
+    CCLOG(@"PK: %ld", (long)[self.mainScene pinKills]);
+    
     // Show high score label if new high score
     if ([self isNewRecord:category]) {
       _newHighScoreLabel.visible = TRUE;

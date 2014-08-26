@@ -260,8 +260,6 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
         _pauseButton.visible = NO;
         _pauseButton.userInteractionEnabled = NO;
     }
-    
-    CCLOG(@"%f",_timer);
 }
 
 - (void)onExit
