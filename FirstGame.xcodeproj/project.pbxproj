@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		043CFF4519AC32E300C70879 /* PausePopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 043CFF4419AC32E300C70879 /* PausePopup.m */; };
 		04F9DC67198EAC1400FE1199 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9DC66198EAC1400FE1199 /* Images.xcassets */; };
 		04F9DC6A198EAC1C00FE1199 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9DC69198EAC1C00FE1199 /* Images.xcassets */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		043CFF4319AC32E300C70879 /* PausePopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PausePopup.h; path = Source/PausePopup.h; sourceTree = "<group>"; };
+		043CFF4419AC32E300C70879 /* PausePopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PausePopup.m; path = Source/PausePopup.m; sourceTree = "<group>"; };
 		04F9DC66198EAC1400FE1199 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FirstGame/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		04F9DC69198EAC1C00FE1199 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
@@ -151,6 +154,8 @@
 				BB6EA75C19662CB00089A121 /* GameOverPopup.m */,
 				B7378992180767190076A88C /* MainScene.h */,
 				B7378993180767190076A88C /* MainScene.m */,
+				043CFF4319AC32E300C70879 /* PausePopup.h */,
+				043CFF4419AC32E300C70879 /* PausePopup.m */,
 			);
 			name = Scenes;
 			sourceTree = "<group>";
@@ -409,6 +414,7 @@
 				BB6EA75A1965DC880089A121 /* GameState.m in Sources */,
 				B7378994180767190076A88C /* MainScene.m in Sources */,
 				BBF2FB701974616900253E21 /* CoordinateUtils.m in Sources */,
+				043CFF4519AC32E300C70879 /* PausePopup.m in Sources */,
 				BB36768F1964B410001AC6E9 /* Dart.m in Sources */,
 				BB6EA7541965CC060089A121 /* Enemy.m in Sources */,
 				BB6EA75D19662CB00089A121 /* GameOverPopup.m in Sources */,

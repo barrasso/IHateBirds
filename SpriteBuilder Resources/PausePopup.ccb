@@ -18,7 +18,7 @@
 	<key>currentSequenceId</key>
 	<integer>0</integer>
 	<key>docDimensionsType</key>
-	<integer>2</integer>
+	<integer>1</integer>
 	<key>fileType</key>
 	<string>CocosBuilder</string>
 	<key>fileVersion</key>
@@ -48,7 +48,7 @@
 				<array>
 					<dict>
 						<key>UUID</key>
-						<integer>4</integer>
+						<integer>2</integer>
 						<key>baseClass</key>
 						<string>CCButton</string>
 						<key>children</key>
@@ -724,7 +724,7 @@
 						<key>customClass</key>
 						<string></string>
 						<key>displayName</key>
-						<string>CCLabelTTF</string>
+						<string>Paused Label</string>
 						<key>memberVarAssignmentName</key>
 						<string></string>
 						<key>memberVarAssignmentType</key>
@@ -920,6 +920,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 				</array>
 				<key>customClass</key>
@@ -1006,7 +1008,7 @@
 			</dict>
 		</array>
 		<key>customClass</key>
-		<string></string>
+		<string>PausePopup</string>
 		<key>displayName</key>
 		<string>CCNode</string>
 		<key>memberVarAssignmentName</key>
@@ -1044,8 +1046,8 @@
 				<string>Size</string>
 				<key>value</key>
 				<array>
-					<real>368</real>
-					<real>184</real>
+					<real>0.0</real>
+					<real>0.0</real>
 					<integer>0</integer>
 					<integer>0</integer>
 				</array>
@@ -1086,13 +1088,13 @@
 			<key>ext</key>
 			<string>phone</string>
 			<key>height</key>
-			<integer>184</integer>
+			<integer>0</integer>
 			<key>name</key>
 			<string>Phone</string>
 			<key>scale</key>
 			<real>1</real>
 			<key>width</key>
-			<integer>368</integer>
+			<integer>0</integer>
 		</dict>
 		<dict>
 			<key>centeredOrigin</key>
@@ -1100,13 +1102,13 @@
 			<key>ext</key>
 			<string>tablet phonehd</string>
 			<key>height</key>
-			<integer>184</integer>
+			<integer>0</integer>
 			<key>name</key>
 			<string>Tablet</string>
 			<key>scale</key>
 			<real>2</real>
 			<key>width</key>
-			<integer>368</integer>
+			<integer>0</integer>
 		</dict>
 	</array>
 	<key>sequences</key>
@@ -1149,8 +1151,8 @@
 		</dict>
 	</array>
 	<key>stageBorder</key>
-	<integer>1</integer>
+	<integer>3</integer>
 	<key>stageColor</key>
-	<integer>0</integer>
+	<integer>2</integer>
 </dict>
 </plist>

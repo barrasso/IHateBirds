@@ -8,6 +8,7 @@
 
 #import "MainScene.h"
 #import "GameOverPopup.h"
+#import "PausePopup.h"
 #import "Enemy.h"
 #import "Dart.h"
 #import "CoordinateUtils.h"
@@ -479,7 +480,15 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // Pause the game
     self.paused = YES;
     
-    // Slide in paused game layer
+    // Load Pause popup and set position
+    PausePopup *pausePopover = (PausePopup *)[CCBReader load:@"PausePopup"];
+    pausePopover.mainScene = self;
+    pausePopover.positionType = CCPositionTypeNormalized;
+    pausePopover.position = ccp(0.5, 0.5);
+    pausePopover.zOrder = 999;
+    
+    // Add popup to mainscene
+    [self addChild:pausePopover];
 }
 
 #pragma mark - Game Over
