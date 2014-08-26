@@ -361,6 +361,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // If tutorial enemy dies, turn off tutorial mode
     if (enemy.isTutorialVersion)
     {
+        // Turn off tutorial
         [GameState sharedInstance].tutorialModeOn = FALSE;
         _tutorialNode.visible = FALSE;
       
