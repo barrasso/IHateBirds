@@ -128,8 +128,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.0</real>
-							<real>1.2000000476837158</real>
+							<real>-0.15000000596046448</real>
+							<real>0.10000000149011612</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -202,7 +202,7 @@
 									<key>easing</key>
 									<dict>
 										<key>type</key>
-										<integer>1</integer>
+										<integer>10</integer>
 									</dict>
 									<key>name</key>
 									<string>position</string>
@@ -212,8 +212,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>0.91314047574996948</real>
-										<real>1.5</real>
+										<real>1.0549899339675903</real>
+										<real>1.2512342929840088</real>
 									</array>
 								</dict>
 								<dict>
@@ -225,7 +225,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.3333333432674408</real>
+									<real>0.43333333730697632</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -276,8 +276,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.91314047574996948</real>
-							<real>1.5</real>
+							<real>0.89999997615814209</real>
+							<real>0.14000000059604645</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -595,7 +595,7 @@
 									<key>easing</key>
 									<dict>
 										<key>type</key>
-										<integer>1</integer>
+										<integer>10</integer>
 									</dict>
 									<key>name</key>
 									<string>position</string>
@@ -605,8 +605,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>0.072999998927116394</real>
-										<real>1.5</real>
+										<real>0.24090376496315002</real>
+										<real>1.2406485080718994</real>
 									</array>
 								</dict>
 								<dict>
@@ -618,7 +618,7 @@
 									<key>name</key>
 									<string>position</string>
 									<key>time</key>
-									<real>0.3333333432674408</real>
+									<real>0.43333333730697632</real>
 									<key>type</key>
 									<integer>3</integer>
 									<key>value</key>
@@ -669,8 +669,8 @@
 						<string>Position</string>
 						<key>value</key>
 						<array>
-							<real>0.072999998927116394</real>
-							<real>1.5</real>
+							<real>0.079999998211860657</real>
+							<real>0.14000000059604645</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -998,8 +998,8 @@
 									<integer>3</integer>
 									<key>value</key>
 									<array>
-										<real>0.5</real>
-										<real>1.8500000238418579</real>
+										<real>0.63761508464813232</real>
+										<real>1.847353458404541</real>
 									</array>
 								</dict>
 								<dict>
@@ -1063,7 +1063,7 @@
 						<key>value</key>
 						<array>
 							<real>0.5</real>
-							<real>1.8500000238418579</real>
+							<real>0.74000000953674316</real>
 							<integer>0</integer>
 							<integer>2</integer>
 							<integer>2</integer>
@@ -1236,8 +1236,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -1361,13 +1359,13 @@
 			<key>chainedSequenceId</key>
 			<integer>-1</integer>
 			<key>length</key>
-			<real>0.3333333432674408</real>
+			<real>0.83333331346511841</real>
 			<key>name</key>
 			<string>Default Timeline</string>
 			<key>offset</key>
 			<real>0.0</real>
 			<key>position</key>
-			<real>0.0</real>
+			<real>0.83333331346511841</real>
 			<key>resolution</key>
 			<real>30</real>
 			<key>scale</key>

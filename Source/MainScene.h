@@ -13,17 +13,20 @@
 // Current amount of enemies
 @property (nonatomic, assign) int currentEnemyCount;
 
-// Point of Explosion
-@property (nonatomic, assign) CGPoint explosionPoint;
-
 // Check if game is over
 @property (nonatomic, assign) BOOL isGameOver;
+
+// Point of Explosion
+@property (nonatomic, assign) CGPoint explosionPoint;
 
 // Game score
 @property (nonatomic, assign) NSInteger score;
 
-// Points per second
-@property (nonatomic, assign) float pps;
+// Number of Multi Kills
+@property (nonatomic, assign) NSInteger multiKills;
+
+// Number of Pin Kills
+@property (nonatomic, assign) NSInteger pinKills;
 
 // End game
 - (void)gameOver;

@@ -57,11 +57,14 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // If initialized
     if (self)
     {
-        // Set Enemies, Score to 0, Start game
-        self.currentEnemyCount = 0;
+        // Init variables to zero
         self.isGameOver = FALSE;
+        self.currentEnemyCount = 0;
         self.score = 0;
+        self.multiKills = 0;
+        self.pinKills = 0;
     }
+    
     return self;
 }
 
@@ -182,7 +185,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
             // Set invisible on timer
             [self scheduleBlock:^(CCTimer *timer) {
             _waveLabel.visible = FALSE;
-            } delay:2.0f];
+            } delay:3.0f];
         
             // Set wave number to 0 on timer
             [self scheduleBlock:^(CCTimer *timer) {
@@ -201,7 +204,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
             // Set invisible on timer
             [self scheduleBlock:^(CCTimer *timer) {
                 _waveLabel.visible = FALSE;
-            } delay:2.0f];
+            } delay:3.0f];
         
             // Set wave number to 0 on timer
             [self scheduleBlock:^(CCTimer *timer) {
@@ -220,7 +223,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
             // Set invisible on timer
             [self scheduleBlock:^(CCTimer *timer) {
                 _waveLabel.visible = FALSE;
-            } delay:2.0f];
+            } delay:3.0f];
         
             // Set wave number to 0 on timer
             [self scheduleBlock:^(CCTimer *timer) {
@@ -239,7 +242,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
             // Set invisible on timer
             [self scheduleBlock:^(CCTimer *timer) {
                 _waveLabel.visible = FALSE;
-            } delay:2.0f];
+            } delay:3.0f];
         
             // Set wave number to 0 on timer
             [self scheduleBlock:^(CCTimer *timer) {
@@ -249,7 +252,14 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Handle timer for game over
     if (self.isGameOver)
+    {
+        // Set timer to zero
         _timer = 0.f;
+        
+        // Hide and disable the pause button
+        _pauseButton.visible = NO;
+        _pauseButton.userInteractionEnabled = NO;
+    }
     
     CCLOG(@"%f",_timer);
 }
@@ -384,6 +394,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     {
         _bonusNode.position = ccp(enemy.positionInPoints.x, enemy.positionInPoints.y - 25.f) ;
         [self displayBonusLabel:@"PINNED" points:PINCUSHION_BONUS];
+        self.pinKills++;
         points = PINCUSHION_BONUS;
     }
     // Give regular amount of points
@@ -399,6 +410,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     {
         _bonusNode.position = ccp(enemy.positionInPoints.x, enemy.positionInPoints.y - 25.f) ;
         [self displayBonusLabel:@"MULTI KILL" points:MULTISHOT_BONUS];
+        self.multiKills++;
         points += MULTISHOT_BONUS;
     }
     // Dart has hit one enemy
@@ -495,10 +507,6 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 
 - (void)gameOver
 {
-    // Hide and disable the pause button
-    _pauseButton.visible = NO;
-    _pauseButton.userInteractionEnabled = NO;
-    
     // Damp the physics
     [_physicsNode space].damping = 0.2f;
     
@@ -507,13 +515,6 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Disable user interaction
     self.userInteractionEnabled = FALSE;
-  
-    // Calculate PPS
-    self.pps = [self calculatePPS];
-  
-    // Check for NAN value
-    if (self.pps == NAN)
-        self.pps = 0;
   
     // Load explosion animation
     [self triggerExplosion];
@@ -592,21 +593,6 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
   
     // Fade enemy out
     [image runAction:fadeOut];
-}
-
-#pragma mark - Scores
-
-- (float)calculatePPS
-{
-    // Calculate PPS
-    self.pps = self.score/_timer;
-  
-    // Handle weird conditions
-    if (self.pps != self.pps)
-        self.pps = 0;
-  
-    // Return value
-    return self.pps;
 }
 
 @end

@@ -128,9 +128,6 @@
       case score:
         return @"score";
         break;
-      case pps:
-        return @"pps";
-        break;
       default:
         return @"score";
     }
