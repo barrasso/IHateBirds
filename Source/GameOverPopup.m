@@ -11,17 +11,19 @@
 
 @implementation GameOverPopup
 {
-  // Labels
-  CCLabelTTF *_currentScore;
-  CCLabelTTF *_highScoreLabel;
-  CCLabelTTF *_newHighScoreLabel;
-  CCLabelTTF *_categoryNameLabel;
+    // Labels
+    CCLabelTTF *_currentScore;
+    CCLabelTTF *_highScoreLabel;
+    CCLabelTTF *_newHighScoreLabel;
+    CCLabelTTF *_categoryNameLabel;
+    CCLabelTTF *_multiKillsLabel;
+    CCLabelTTF *_pinKillsLabel;
     
-  // Scores
-  CCNode *_scoreBox;
+    // Scores
+    CCNode *_scoreBox;
     
-  // Random Index
-  int randomIndex;
+    // Random Index
+    int randomIndex;
 }
 
 - (id)init
@@ -97,8 +99,8 @@
     _currentScore.string = [NSString stringWithFormat:@"%@", [self.mainScene valueForKey:category]];
     
     // Update multikill and pin kill labels
-    CCLOG(@"MK: %ld", (long)[self.mainScene multiKills]);
-    CCLOG(@"PK: %ld", (long)[self.mainScene pinKills]);
+    _multiKillsLabel.string = [NSString stringWithFormat:@"MK: %ld",(long)[self.mainScene multiKills]];
+    _pinKillsLabel.string = [NSString stringWithFormat:@"PK: %ld",(long)[self.mainScene pinKills]];
     
     // Show high score label if new high score
     if ([self isNewRecord:category]) {
@@ -118,9 +120,14 @@
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
 
-- (void)openStore
+- (void)openGameCenter
 {
-    // Open the in game store
+    // Opens GameCenter
+}
+
+- (void)shareToFacebook
+{
+    // Shares score to Facebook
 }
 
 # pragma mark - Enum Functions
