@@ -28,6 +28,8 @@
 #import "AppDelegate.h"
 #import "CCBuilderReader.h"
 #import "GameState.h"
+#import "GCHelper.h"
+#import <Crashlytics/Crashlytics.h>
 
 @implementation AppController
 
@@ -54,16 +56,46 @@
     //[cocos2dSetup setObject:kEAGLColorFormatRGB565 forKey:CCConfigPixelFormat];
   
     //[cocos2dSetup setObject:@YES forKey:CCSetupShowDebugStats];
-  
+      
     [self setupCocos2dWithOptions:cocos2dSetup];
+    
+    // Crashlytics
+    [Crashlytics startWithAPIKey:@"828dced47da406438127a82d9a9bb6663463722a"];
+    
+    //////// MGWU SDK ////////
+    [MGWU loadMGWU:@"killurself"];
+    [MGWU noFacebookPrompt];
+
+    // Set reminder message
+    [MGWU setReminderMessage:@"More birds need to die!"];
+    
+    // Prompt to rate game
+    [MGWU setAppiraterAppId:@"913230912" andAppName:@"I Hate Birds"];
+    
+    // Set Game Link URL
+    [MGWU setGameLinkURL:@""];
+    
+    // Set Icon URL
+    [MGWU setIconURL:@""];
     
     return YES;
 }
 
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    // attempt to extract a token from the url
+    return [MGWU handleURL:url];
+}
+
 - (CCScene*) startScene
 {
-  [GameState sharedInstance].tutorialModeOn = TRUE;
-  return [CCBReader loadAsScene:@"MainScene"];
+    // Authenticate GameCenter User
+    [[GCHelper sharedInstance] authenticateLocalUser];
+    
+    // Turn on tutorial mode
+    [GameState sharedInstance].tutorialModeOn = TRUE;
+    
+    // Load MainScne
+    return [CCBReader loadAsScene:@"MainScene"];
 }
 
 @end

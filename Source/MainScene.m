@@ -499,6 +499,9 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Add popup to mainscene
     [self addChild:pausePopover];
+    
+    // Log paused game
+    [MGWU logEvent:@"paused_game"];
 }
 
 #pragma mark - Game Over
@@ -529,6 +532,14 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Add popup to mainscene
     [self addChild:popover];
+    
+    // Log Game over
+    [MGWU logEvent:@"game_over" withParams:nil];
+    
+    // Log wave number
+    NSNumber *waveNum = [NSNumber numberWithInt:waveNumber];
+    NSDictionary *params = [[NSDictionary alloc] initWithObjectsAndKeys: waveNum, @"wave_number", nil];
+    [MGWU logEvent:@"waves_complete" withParams:params];
 }
 
 #pragma mark - Explosions
@@ -576,6 +587,9 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     [self scheduleBlock:^(CCTimer *timer) {
         _tutorialNode.visible = FALSE;
     } delay:0.7f];
+    
+    // Log toggled tutorial
+    [MGWU logEvent:@"tutorial_toggled"];
 }
 
 #pragma mark - Effects

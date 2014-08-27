@@ -8,6 +8,7 @@
 
 #import "GameOverPopup.h"
 #import "MainScene.h"
+#import "GCHelper.h"
 
 @implementation GameOverPopup
 {
@@ -24,6 +25,9 @@
     
     // Random Index
     int randomIndex;
+    
+    // Strings
+    NSString *highScorePost;
 }
 
 - (id)init
@@ -46,6 +50,15 @@
     
     // Load Score Box
     [self loadScoreBox:self.currentCategoryIndex];
+    
+    // MGWU Analytics
+    NSNumber *gameScore = [NSNumber numberWithFloat:[self.mainScene score]];
+    NSNumber *mks = [NSNumber numberWithFloat:[self.mainScene multiKills]];
+    NSNumber *pks = [NSNumber numberWithFloat:[self.mainScene pinKills]];
+    NSDictionary *userStats = [[NSDictionary alloc] initWithObjectsAndKeys:gameScore,@"score", mks, @"multi kills", pks, @"pin kills", nil];
+    
+    // Log user scores
+    [MGWU logEvent:@"game_complete_with_stats" withParams:userStats];
 }
 
 # pragma mark - Scores
@@ -116,6 +129,9 @@
 
 - (void)restartGame
 {
+    // Log restarted game
+    [MGWU logEvent:@"restarted_game"];
+    
     // Replay the game when pressed
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }
@@ -123,11 +139,42 @@
 - (void)openGameCenter
 {
     // Opens GameCenter
+    [[GCHelper sharedInstance] showLeaderboard];
+    
+    // Log opened gamecenter
+    [MGWU logEvent:@"opened_gamecenter"];
 }
 
 - (void)shareToFacebook
 {
+    // Log pressed facebook
+    [MGWU logEvent:@"pressed_facebook"];
+    
+    // High score post
+    highScorePost = [NSString stringWithFormat:@"Just scored %i!  #IHateBirds",[self.mainScene score]];
+    
     // Shares score to Facebook
+    // If the user is logged in to Facebook
+    if ([MGWU isFacebookActive])
+    {
+        // Create a new facebook share post
+        [MGWU shareWithTitle:@"I Really Do Hate Birds" caption:highScorePost andDescription:@"Think you can kill more birds than me?"];
+        
+        // Log facebook shares
+        [MGWU logEvent:@"shared_to_facebook"];
+    }
+    
+    else
+    {
+        // Prompt the user to log into facebook
+        [MGWU loginToFacebook];
+        
+        // Create a new facebook share post
+        [MGWU shareWithTitle:@"I Really Do Hate Birds" caption:highScorePost andDescription:@"Think you can kill more birds than me?"];
+        
+        // Log facebook shares
+        [MGWU logEvent:@"shared_to_facebook"];
+    }
     
 }
 
