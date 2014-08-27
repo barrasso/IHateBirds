@@ -19,6 +19,7 @@
     CCLabelTTF *_categoryNameLabel;
     CCLabelTTF *_multiKillsLabel;
     CCLabelTTF *_pinKillsLabel;
+    CCLabelTTF *_accuracyLabel;
     
     // Scores
     CCNode *_scoreBox;
@@ -114,6 +115,9 @@
     // Update multikill and pin kill labels
     _multiKillsLabel.string = [NSString stringWithFormat:@"MK: %ld",(long)[self.mainScene multiKills]];
     _pinKillsLabel.string = [NSString stringWithFormat:@"PK: %ld",(long)[self.mainScene pinKills]];
+    
+    // Calculate accuracy and update label as percent
+    _accuracyLabel.string = [NSString stringWithFormat:@"%0.2f%%",(float)[self.mainScene dartsHit]/[self.mainScene totalDarts] * 100.f];
     
     // Show high score label if new high score
     if ([self isNewRecord:category]) {

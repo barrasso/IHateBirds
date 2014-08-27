@@ -16,6 +16,12 @@
 // Check if game is over
 @property (nonatomic, assign) BOOL isGameOver;
 
+// Total amount of darts used
+@property (nonatomic, assign) NSInteger totalDarts;
+
+// Darts that hit an enemy
+@property (nonatomic, assign) NSInteger dartsHit;
+
 // Point of Explosion
 @property (nonatomic, assign) CGPoint explosionPoint;
 

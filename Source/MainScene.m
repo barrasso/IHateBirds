@@ -420,6 +420,9 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // Display points update score
     [enemy displayPoints:points];
     self.score += points;
+    
+    // Increment darts hit
+    self.dartsHit++;
   
     // Remove dart and enemy
     // First fade out both objects, then apply dissolve effect to enemy
@@ -480,6 +483,9 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
         // Apply force to dart
         CGPoint force = ccpMult(diffPoint, 600);
         [dart.physicsBody applyForce:force];
+        
+        // Increment total darts
+        self.totalDarts++;
     }
 }
 
