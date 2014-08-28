@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0430C0A719AD497800C2C191 /* Images1.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0430C0A619AD497800C2C191 /* Images1.xcassets */; };
 		043CFF4519AC32E300C70879 /* PausePopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 043CFF4419AC32E300C70879 /* PausePopup.m */; };
+		0494626419AEAE7100F8EE16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0494626319AEAE7100F8EE16 /* Images.xcassets */; };
 		04B55B5819AE2FCC00870E43 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55B5719AE2FCC00870E43 /* libz.dylib */; };
 		04B55B5B19AE2FD400870E43 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55B5A19AE2FD400870E43 /* MessageUI.framework */; };
 		04B55B5D19AE2FDB00870E43 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55B5C19AE2FDB00870E43 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -86,8 +86,6 @@
 		04B55BEF19AE302200870E43 /* send-field-landscape.png in Resources */ = {isa = PBXBuildFile; fileRef = 04B55BA919AE302200870E43 /* send-field-landscape.png */; };
 		04B55BF319AE399000870E43 /* GCHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B55BF219AE399000870E43 /* GCHelper.m */; };
 		04B55BF519AE3A5A00870E43 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55BF419AE3A5A00870E43 /* GameKit.framework */; };
-		04B55BF819AE42FB00870E43 /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55BF719AE42FB00870E43 /* Crashlytics.framework */; };
-		04F9DC67198EAC1400FE1199 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04F9DC66198EAC1400FE1199 /* Images.xcassets */; };
 		8392007A18EE8E3300B6C429 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8392007918EE8E3300B6C429 /* GLKit.framework */; };
 		B71F5911188484E7003F4D28 /* iPad-old.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5907188484E7003F4D28 /* iPad-old.png */; };
 		B71F5912188484E7003F4D28 /* iPad-old@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B71F5908188484E7003F4D28 /* iPad-old@2x.png */; };
@@ -142,9 +140,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0430C0A619AD497800C2C191 /* Images1.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images1.xcassets; sourceTree = "<group>"; };
 		043CFF4319AC32E300C70879 /* PausePopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PausePopup.h; path = Source/PausePopup.h; sourceTree = "<group>"; };
 		043CFF4419AC32E300C70879 /* PausePopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PausePopup.m; path = Source/PausePopup.m; sourceTree = "<group>"; };
+		0494626319AEAE7100F8EE16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		04B55B5719AE2FCC00870E43 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		04B55B5A19AE2FD400870E43 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		04B55B5C19AE2FDB00870E43 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -223,8 +221,6 @@
 		04B55BF119AE399000870E43 /* GCHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GCHelper.h; sourceTree = "<group>"; };
 		04B55BF219AE399000870E43 /* GCHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GCHelper.m; sourceTree = "<group>"; };
 		04B55BF419AE3A5A00870E43 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
-		04B55BF719AE42FB00870E43 /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
-		04F9DC66198EAC1400FE1199 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = FirstGame/Images.xcassets; sourceTree = SOURCE_ROOT; };
 		8392007918EE8E3300B6C429 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		B71F5907188484E7003F4D28 /* iPad-old.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old.png"; path = "Icons/iPad-old.png"; sourceTree = "<group>"; };
 		B71F5908188484E7003F4D28 /* iPad-old@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iPad-old@2x.png"; path = "Icons/iPad-old@2x.png"; sourceTree = "<group>"; };
@@ -278,7 +274,6 @@
 			files = (
 				04B55B6119AE2FED00870E43 /* SystemConfiguration.framework in Frameworks */,
 				04B55B5F19AE2FE300870E43 /* StoreKit.framework in Frameworks */,
-				04B55BF819AE42FB00870E43 /* Crashlytics.framework in Frameworks */,
 				04B55B5D19AE2FDB00870E43 /* Social.framework in Frameworks */,
 				04B55B5B19AE2FD400870E43 /* MessageUI.framework in Frameworks */,
 				04B55BAA19AE302200870E43 /* mgwuSDK.framework in Frameworks */,
@@ -491,7 +486,7 @@
 		B77F1B2517B978D7009739AE = {
 			isa = PBXGroup;
 			children = (
-				0430C0A619AD497800C2C191 /* Images1.xcassets */,
+				0494626319AEAE7100F8EE16 /* Images.xcassets */,
 				B737893C1807616C0076A88C /* Source */,
 				B77F1B4617B978D7009739AE /* Resources */,
 				9222E2B918734FF800A246C7 /* libs */,
@@ -512,7 +507,6 @@
 		B77F1B3017B978D7009739AE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				04B55BF719AE42FB00870E43 /* Crashlytics.framework */,
 				04B55BF419AE3A5A00870E43 /* GameKit.framework */,
 				04B55B6219AE302200870E43 /* mgwuSDK.embeddedframework */,
 				04B55B6019AE2FED00870E43 /* SystemConfiguration.framework */,
@@ -538,7 +532,6 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				04F9DC66198EAC1400FE1199 /* Images.xcassets */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -562,7 +555,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B77F1CDE17B978D8009739AE /* Build configuration list for PBXNativeTarget "IHateBirds" */;
 			buildPhases = (
-				D2E0167A18D782EC00927430 /* Run Script */,
 				B77F1B2A17B978D7009739AE /* Sources */,
 				B77F1B2B17B978D7009739AE /* Frameworks */,
 				B77F1B2C17B978D7009739AE /* Resources */,
@@ -646,12 +638,12 @@
 				04B55BAC19AE302200870E43 /* bluechatbubble.png in Resources */,
 				04B55BCE19AE302200870E43 /* MGWUBackground-Landscape~iphone.png in Resources */,
 				04B55BDC19AE302200870E43 /* MGWUClose@2x.png in Resources */,
+				0494626419AEAE7100F8EE16 /* Images.xcassets in Resources */,
 				04B55BE519AE302200870E43 /* mgwuPlaceholderIcon.png in Resources */,
 				04B55BB519AE302200870E43 /* FBNoThanksButton@2x.png in Resources */,
 				04B55BB219AE302200870E43 /* FBLoginButtonPressed.png in Resources */,
 				04B55BC619AE302200870E43 /* MGWUAboutFooter-Landscape~iphone.png in Resources */,
 				04B55BE819AE302200870E43 /* mgwuPlaceholderIconDark@2x.png in Resources */,
-				04F9DC67198EAC1400FE1199 /* Images.xcassets in Resources */,
 				04B55BE219AE302200870E43 /* mgwuLogo@2x.png in Resources */,
 				B7378978180762440076A88C /* Default@2x.png in Resources */,
 				B71F5914188484E7003F4D28 /* iPad@2x.png in Resources */,
@@ -693,7 +685,6 @@
 				B71F5915188484E7003F4D28 /* iPhone-old.png in Resources */,
 				04B55BAB19AE302200870E43 /* aqua.png in Resources */,
 				04B55BE919AE302200870E43 /* operator.available.png in Resources */,
-				0430C0A719AD497800C2C191 /* Images1.xcassets in Resources */,
 				04B55BD819AE302200870E43 /* MGWUBackgroundDark-Portrait@2x~iphone.png in Resources */,
 				04B55BC019AE302200870E43 /* mgwu-m.png in Resources */,
 				04B55BB819AE302200870E43 /* green.png in Resources */,
@@ -739,20 +730,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "";
-		};
-		D2E0167A18D782EC00927430 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "./Crashlytics.framework/run 828dced47da406438127a82d9a9bb6663463722a 5f8a45089f671efb95062186d99cfb59a0e7c39090d4827064ab65ca4a835355";
 		};
 /* End PBXShellScriptBuildPhase section */
 

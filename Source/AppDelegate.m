@@ -29,7 +29,6 @@
 #import "CCBuilderReader.h"
 #import "GameState.h"
 #import "GCHelper.h"
-#import <Crashlytics/Crashlytics.h>
 
 @implementation AppController
 
@@ -60,7 +59,7 @@
     [self setupCocos2dWithOptions:cocos2dSetup];
     
     // Crashlytics
-    [Crashlytics startWithAPIKey:@"828dced47da406438127a82d9a9bb6663463722a"];
+    //[Crashlytics startWithAPIKey:@"828dced47da406438127a82d9a9bb6663463722a"];
     
     //////// MGWU SDK ////////
     [MGWU loadMGWU:@"killurself"];
