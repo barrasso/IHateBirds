@@ -506,6 +506,10 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // Add popup to mainscene
     [self addChild:pausePopover];
     
+    // Disable and hide pause button
+    _pauseButton.visible = NO;
+    _pauseButton.userInteractionEnabled = NO;
+    
     // Log paused game
     [MGWU logEvent:@"paused_game"];
 }
