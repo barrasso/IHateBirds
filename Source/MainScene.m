@@ -617,4 +617,20 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     [image runAction:fadeOut];
 }
 
+#pragma mark - Ads
+
+//- (void)loadInterstitial
+//{
+//    // Load interstitial ads
+//    _interstitial = [[GADInterstitial alloc] init];
+//    _interstitial.adUnitID = @"ca-app-pub-6360908399010535/8481870209";
+//    [_interstitial loadRequest:[GADRequest request]];
+//    _interstitial.delegate = self;
+//}
+//
+//- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial
+//{
+//    [_interstitial presentFromRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+//}
+
 @end
