@@ -390,10 +390,15 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // Determine if dart is colliding with already-hit enemy (for extra points)
     if (enemy.isShot)
     {
+        // set bonus points position and display it
         _bonusNode.position = ccp(enemy.positionInPoints.x, enemy.positionInPoints.y - 25.f) ;
         [self displayBonusLabel:@"PINNED" points:PINCUSHION_BONUS];
+        // increment pin kills
         self.pinKills++;
+        // add pin bonus to points
         points = PINCUSHION_BONUS;
+        // play pop sound
+        [[OALSimpleAudio sharedInstance] playEffect:@"pop.mp3" volume:1.5f pitch:1.0f pan:1.0f loop:NO];
     }
     // Give regular amount of points
     else
@@ -406,10 +411,15 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // Determine if dart has hit different enemy before (for extra points)
     if (dart.hasHitEnemy)
     {
+        // set bonus points position and display it
         _bonusNode.position = ccp(enemy.positionInPoints.x, enemy.positionInPoints.y - 25.f) ;
         [self displayBonusLabel:@"MULTI KILL" points:MULTISHOT_BONUS];
+        // increment mulitkills
         self.multiKills++;
+        // add multi bonus
         points += MULTISHOT_BONUS;
+        // play pop sound
+        [[OALSimpleAudio sharedInstance] playEffect:@"pop.mp3" volume:1.5f pitch:1.0f pan:1.0f loop:NO];
     }
     // Dart has hit one enemy
     else
@@ -493,6 +503,9 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 
 - (void)pauseGame
 {
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+    
     // Pause the game
     self.paused = YES;
     
@@ -556,6 +569,9 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 
 - (void)loadBloodyExplosion:(CCNode *)enemy
 {
+    // Play dead bird sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"dead_bird.m4a" volume:0.8f pitch:1.0f pan:1.0f loop:NO];
+    
     // Load the bloody effect
     CCNode *bloodExplosion = (CCNode *)[CCBReader load:@"BloodyExplosion"];
     

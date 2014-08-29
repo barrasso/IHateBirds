@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		043CFF4519AC32E300C70879 /* PausePopup.m in Sources */ = {isa = PBXBuildFile; fileRef = 043CFF4419AC32E300C70879 /* PausePopup.m */; };
 		0494626419AEAE7100F8EE16 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0494626319AEAE7100F8EE16 /* Images.xcassets */; };
+		0494626819B107B700F8EE16 /* dead_bird.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 0494626719B107B700F8EE16 /* dead_bird.m4a */; };
+		0494626C19B10B4900F8EE16 /* pop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0494626B19B10B4900F8EE16 /* pop.mp3 */; };
+		0494626E19B10C0500F8EE16 /* button_click.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0494626D19B10C0500F8EE16 /* button_click.wav */; };
+		0494627019B10F0600F8EE16 /* birds-ambience.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0494626F19B10F0600F8EE16 /* birds-ambience.wav */; };
+		0494627319B1124100F8EE16 /* Wat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0494627219B1124100F8EE16 /* Wat.wav */; };
+		0494627519B1137200F8EE16 /* wah.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0494627419B1137200F8EE16 /* wah.mp3 */; };
+		0494627719B1157500F8EE16 /* whip.wav in Resources */ = {isa = PBXBuildFile; fileRef = 0494627619B1157500F8EE16 /* whip.wav */; };
 		04B55B5819AE2FCC00870E43 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55B5719AE2FCC00870E43 /* libz.dylib */; };
 		04B55B5B19AE2FD400870E43 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55B5A19AE2FD400870E43 /* MessageUI.framework */; };
 		04B55B5D19AE2FDB00870E43 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04B55B5C19AE2FDB00870E43 /* Social.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -143,6 +150,13 @@
 		043CFF4319AC32E300C70879 /* PausePopup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PausePopup.h; path = Source/PausePopup.h; sourceTree = "<group>"; };
 		043CFF4419AC32E300C70879 /* PausePopup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PausePopup.m; path = Source/PausePopup.m; sourceTree = "<group>"; };
 		0494626319AEAE7100F8EE16 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0494626719B107B700F8EE16 /* dead_bird.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = dead_bird.m4a; sourceTree = "<group>"; };
+		0494626B19B10B4900F8EE16 /* pop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pop.mp3; sourceTree = "<group>"; };
+		0494626D19B10C0500F8EE16 /* button_click.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = button_click.wav; sourceTree = "<group>"; };
+		0494626F19B10F0600F8EE16 /* birds-ambience.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "birds-ambience.wav"; sourceTree = "<group>"; };
+		0494627219B1124100F8EE16 /* Wat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Wat.wav; sourceTree = "<group>"; };
+		0494627419B1137200F8EE16 /* wah.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wah.mp3; sourceTree = "<group>"; };
+		0494627619B1157500F8EE16 /* whip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = whip.wav; sourceTree = "<group>"; };
 		04B55B5719AE2FCC00870E43 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		04B55B5A19AE2FD400870E43 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		04B55B5C19AE2FDB00870E43 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
@@ -532,6 +546,13 @@
 		B77F1B4617B978D7009739AE /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				0494627619B1157500F8EE16 /* whip.wav */,
+				0494627419B1137200F8EE16 /* wah.mp3 */,
+				0494627219B1124100F8EE16 /* Wat.wav */,
+				0494626F19B10F0600F8EE16 /* birds-ambience.wav */,
+				0494626D19B10C0500F8EE16 /* button_click.wav */,
+				0494626B19B10B4900F8EE16 /* pop.mp3 */,
+				0494626719B107B700F8EE16 /* dead_bird.m4a */,
 				B73789911807667A0076A88C /* Icons */,
 				B737893A180761570076A88C /* Published-iOS */,
 			);
@@ -659,6 +680,7 @@
 				04B55BB319AE302200870E43 /* FBLoginButtonPressed@2x.png in Resources */,
 				04B55BAE19AE302200870E43 /* FacebookIcon.png in Resources */,
 				04B55BC819AE302200870E43 /* MGWUAboutFooter-Portrait@2x~iphone.png in Resources */,
+				0494627719B1157500F8EE16 /* whip.wav in Resources */,
 				04B55BCF19AE302200870E43 /* MGWUBackground-Portrait@2x~ipad.png in Resources */,
 				04B55BC719AE302200870E43 /* MGWUAboutFooter-Portrait@2x~ipad.png in Resources */,
 				04B55BD219AE302200870E43 /* MGWUBackground-Portrait~iphone.png in Resources */,
@@ -678,6 +700,7 @@
 				B7378976180762440076A88C /* Default-Landscape~ipad.png in Resources */,
 				04B55BD119AE302200870E43 /* MGWUBackground-Portrait~ipad.png in Resources */,
 				04B55BB419AE302200870E43 /* FBNoThanksButton.png in Resources */,
+				0494627319B1124100F8EE16 /* Wat.wav in Resources */,
 				04B55BD919AE302200870E43 /* MGWUBackgroundDark-Portrait~ipad.png in Resources */,
 				04B55BEF19AE302200870E43 /* send-field-landscape.png in Resources */,
 				04B55BB119AE302200870E43 /* FBLoginButton@2x.png in Resources */,
@@ -687,6 +710,9 @@
 				04B55BE919AE302200870E43 /* operator.available.png in Resources */,
 				04B55BD819AE302200870E43 /* MGWUBackgroundDark-Portrait@2x~iphone.png in Resources */,
 				04B55BC019AE302200870E43 /* mgwu-m.png in Resources */,
+				0494626C19B10B4900F8EE16 /* pop.mp3 in Resources */,
+				0494627519B1137200F8EE16 /* wah.mp3 in Resources */,
+				0494626E19B10C0500F8EE16 /* button_click.wav in Resources */,
 				04B55BB819AE302200870E43 /* green.png in Resources */,
 				04B55BD319AE302200870E43 /* MGWUBackgroundDark-Landscape@2x~ipad.png in Resources */,
 				04B55BCC19AE302200870E43 /* MGWUBackground-Landscape@2x~iphone.png in Resources */,
@@ -698,6 +724,7 @@
 				04B55BEC19AE302200870E43 /* send-button-active.png in Resources */,
 				B71F5917188484E7003F4D28 /* iPhone.png in Resources */,
 				B7378975180762440076A88C /* Default-568h@2x.png in Resources */,
+				0494626819B107B700F8EE16 /* dead_bird.m4a in Resources */,
 				04B55BC219AE302200870E43 /* MGWUAboutFooter-Landscape-568h@2x~iphone.png in Resources */,
 				B71F5918188484E7003F4D28 /* iPhone@2x.png in Resources */,
 				B7378977180762440076A88C /* Default.png in Resources */,
@@ -708,6 +735,7 @@
 				04B55BDD19AE302200870E43 /* MGWUFacebookLoginLandscape.nib in Resources */,
 				04B55BBB19AE302200870E43 /* hipmob.send.png in Resources */,
 				04B55BCA19AE302200870E43 /* MGWUAboutFooter-Portrait~iphone.png in Resources */,
+				0494627019B10F0600F8EE16 /* birds-ambience.wav in Resources */,
 				04B55BD719AE302200870E43 /* MGWUBackgroundDark-Portrait@2x~ipad.png in Resources */,
 				04B55BDF19AE302200870E43 /* MGWUFacebookLoginPortrait.nib in Resources */,
 				04B55BE319AE302200870E43 /* mgwuLogoDark.png in Resources */,

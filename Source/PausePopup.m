@@ -31,6 +31,9 @@
 
 - (void)resumeGame
 {
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+    
     // Resumes gameplay
     self.mainScene.paused = NO;
     
@@ -40,6 +43,9 @@
 
 - (void)restartGame
 {
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+    
     // Restarts a new game
     [[CCDirector sharedDirector] replaceScene:[CCBReader loadAsScene:@"MainScene"]];
 }

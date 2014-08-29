@@ -74,6 +74,7 @@ static const NSInteger STARTING_POINT_VALUE = 3;
 
 - (void)displayPoints:(NSInteger)points {
   if ([_pointsLabel convertToWorldSpace:_pointsLabel.positionInPoints].x + _pointsLabel.contentSizeInPoints.width > [CCDirector sharedDirector].viewSize.width) {
+      
     _pointsLabel.anchorPoint = ccp(1, 1);
     _pointsLabel.positionType = CCPositionTypeNormalized;
     _pointsLabel.position = ccp(0, 0);

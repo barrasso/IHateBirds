@@ -52,6 +52,9 @@
     // Load Score Box
     [self loadScoreBox:self.currentCategoryIndex];
     
+    // Play wat sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"Wat.wav" volume:1.75f pitch:1.0f pan:1.0f loop:NO];
+    
     // MGWU Analytics
     NSNumber *gameScore = [NSNumber numberWithFloat:[self.mainScene score]];
     NSNumber *mks = [NSNumber numberWithFloat:[self.mainScene multiKills]];
@@ -129,10 +132,13 @@
     [self addChild:_scoreBox];
 }
 
-# pragma mark - Selectors
+#pragma mark - Selectors
 
 - (void)restartGame
 {
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+    
     // Log restarted game
     [MGWU logEvent:@"restarted_game"];
     
@@ -142,6 +148,9 @@
 
 - (void)openGameCenter
 {
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+    
     // Opens GameCenter
     [[GCHelper sharedInstance] showLeaderboard];
     
@@ -151,6 +160,9 @@
 
 - (void)shareToFacebook
 {
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+    
     // Log pressed facebook
     [MGWU logEvent:@"pressed_facebook"];
     
@@ -196,7 +208,7 @@
     }
 }
 
-# pragma mark - Toggle score categories
+#pragma mark - Toggle score categories
 
 - (void)previousCategory
 {
