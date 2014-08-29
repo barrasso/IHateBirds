@@ -29,6 +29,7 @@
     CCNode *_bonusNode;
     
     // Buttons
+    CCButton *_muteButton;
     CCNode *_pauseButton;
     
     // Tutorial
@@ -42,6 +43,9 @@
     
     // Wave Number
     int waveNumber;
+    
+    // Muted State
+    int muteState;
 }
 
 // Maximum Amount of enemies to spawn
@@ -77,12 +81,21 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Set Collision delegate
     _physicsNode.collisionDelegate = self;
+    
+    // NSUSer Defaults
+    muteState = [[[NSUserDefaults standardUserDefaults] objectForKey:@"muteState"] intValue];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    if (muteState == 0)
+        _muteButton.selected = NO;
+    else if (muteState == 1)
+        _muteButton.selected = YES;
 }
 
 - (void)onEnter
 {
     [super onEnter];
-    
+
     // Set tutorial to invisible
     _tutorialNode.visible = FALSE;
     
@@ -525,6 +538,27 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     
     // Log paused game
     [MGWU logEvent:@"paused_game"];
+}
+
+- (void)toggleSound
+{
+    // Play button click sound
+    [[OALSimpleAudio sharedInstance] playEffect:@"button_click.wav"];
+
+    // Toggle the sound
+    if ([OALSimpleAudio sharedInstance].muted)
+    {
+        // Unmute
+        [OALSimpleAudio sharedInstance].muted = NO;
+        [[NSUserDefaults standardUserDefaults] setInteger:0 forKey:@"muteState"];
+    }
+    else
+    {
+        // Mute
+        [OALSimpleAudio sharedInstance].muted = YES;
+        [[NSUserDefaults standardUserDefaults] setInteger:1 forKey:@"muteState"];
+
+    }
 }
 
 #pragma mark - Game Over
