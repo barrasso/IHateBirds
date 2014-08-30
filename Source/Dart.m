@@ -24,7 +24,7 @@ const NSInteger MULTISHOT_BONUS = 10;
   [super onEnter];
 
   // Dart Streak
-  self.streak = [CCMotionStreak streakWithFade:0.7f minSeg:50 width:self.contentSizeInPoints.width color:[CCColor colorWithRed:236 green:236 blue:236 alpha:0.46f] textureFilename:@"ccbResources/ccbParticleStars.png"];
+  self.streak = [CCMotionStreak streakWithFade:0.7f minSeg:50 width:self.contentSizeInPoints.width color:[CCColor colorWithRed:181 green:0 blue:0 alpha:0.46f] textureFilename:@"ccbResources/ccbParticleStars.png"];
   self.streak.position = self.position;
   [self.parent addChild:self.streak z:2];
 
