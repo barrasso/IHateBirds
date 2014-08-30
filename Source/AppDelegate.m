@@ -91,7 +91,7 @@
     [[OALSimpleAudio sharedInstance] playBg:@"birds-ambience.wav" volume:2.0f pan:0 loop:YES];
     
     // Background music
-    [[OALSimpleAudio sharedInstance] playBg:@"wah.mp3" volume:0.7f pan:0 loop:YES];
+    [[OALSimpleAudio sharedInstance] playBg:@"wah.mp3" volume:0.5f pan:0 loop:YES];
     
     // Authenticate GameCenter User
     [[GCHelper sharedInstance] authenticateLocalUser];

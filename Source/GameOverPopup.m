@@ -16,10 +16,10 @@
     CCLabelTTF *_currentScore;
     CCLabelTTF *_highScoreLabel;
     CCLabelTTF *_newHighScoreLabel;
-    CCLabelTTF *_categoryNameLabel;
     CCLabelTTF *_multiKillsLabel;
     CCLabelTTF *_pinKillsLabel;
     CCLabelTTF *_accuracyLabel;
+    CCLabelTTF *_bonusLabel;
     
     // Scores
     CCNode *_scoreBox;
@@ -110,17 +110,20 @@
     // Position the scoreBox
     _scoreBox.positionType = CCPositionTypeNormalized;
     _scoreBox.position = ccp(0.5, 0.5);
-  
-    // Change the category label to uppercase
-    _categoryNameLabel.string = [category uppercaseString];
-    _currentScore.string = [NSString stringWithFormat:@"%@", [self.mainScene valueForKey:category]];
     
     // Update multikill and pin kill labels
     _multiKillsLabel.string = [NSString stringWithFormat:@"MK: %ld",(long)[self.mainScene multiKills]];
     _pinKillsLabel.string = [NSString stringWithFormat:@"PK: %ld",(long)[self.mainScene pinKills]];
     
     // Calculate accuracy and update label as percent
-    _accuracyLabel.string = [NSString stringWithFormat:@"%0.2f%%",(float)[self.mainScene dartsHit]/[self.mainScene totalDarts] * 100.f];
+    _accuracyLabel.string = [NSString stringWithFormat:@"%0.1f%% Hit",(float)[self.mainScene dartsHit]/[self.mainScene totalDarts] * 100.f];
+    
+    // Calculate bonus points
+    NSInteger bonusPoints = ([self.mainScene multiKills]+[self.mainScene pinKills] * 10);
+    _bonusLabel.string = [NSString stringWithFormat:@"+%ld Bonus",(long)bonusPoints];
+    
+    // Change current score string
+    _currentScore.string = [NSString stringWithFormat:@"%d", ([self.mainScene score] + bonusPoints)];
     
     // Show high score label if new high score
     if ([self isNewRecord:category]) {
