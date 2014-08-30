@@ -36,9 +36,11 @@ const NSInteger MULTISHOT_BONUS = 10;
     // update position of streak
     self.streak.position = self.position;
     
-      // If the dart hit the side of the screen, remove it
-    if ([self didHitSide]) {
-        [self removeFromParent];
+      // If the dart hit the side of the screen, or if the velocity is zero, remove it
+    if ([self didHitSide] || (self.physicsBody.velocity.x == 0) || (self.physicsBody.velocity.y == 0)) {
+        [self scheduleBlock:^(CCTimer *timer) {
+            [self removeFromParent];
+        } delay:1.0f];
     }
   }
 }
