@@ -72,10 +72,10 @@
     [MGWU setAppiraterAppId:@"913230912" andAppName:@"I Hate Birds"];
     
     // Set Game Link URL
-    [MGWU setGameLinkURL:@""];
+    [MGWU setGameLinkURL:@"http://www.markbarrasso.com"];
     
     // Set Icon URL
-    [MGWU setIconURL:@""];
+    [MGWU setIconURL:@"http://i.imgur.com/aPt4Ouu.png"];
     
     return YES;
 }

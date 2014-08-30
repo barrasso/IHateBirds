@@ -72,10 +72,14 @@
     // Grab record from high score userdefaults
     float record = [[NSUserDefaults standardUserDefaults] floatForKey:categoryName];
     
+    // Calculate bonus value
     float bonusValue = ([self.mainScene multiKills]+[self.mainScene pinKills] * 11);
     
     // Grab current score from gameplay
     float currentScore = [[self.mainScene valueForKey:categoryName] floatValue];
+    
+    // Report Score to gamecenter
+    [[GCHelper defaultHelper] reportScore:(currentScore+bonusValue) forLeaderboardID:@"IHateBirdsLB"];
   
     // If current score is greater then the record, set it as the new record
     if ((currentScore+bonusValue) > record) {
@@ -125,6 +129,9 @@
     // Change current score string
     _currentScore.string = [NSString stringWithFormat:@"%d", ([self.mainScene score] + bonusPoints)];
     
+    // High score post
+    highScorePost = [NSString stringWithFormat:@"Just scored %d!",([self.mainScene score] + bonusPoints)];
+    
     // Show high score label if new high score
     if ([self isNewRecord:category]) {
       _newHighScoreLabel.visible = TRUE;
@@ -169,15 +176,12 @@
     // Log pressed facebook
     [MGWU logEvent:@"pressed_facebook"];
     
-    // High score post
-    highScorePost = [NSString stringWithFormat:@"Just scored %i!  #IHateBirds",[self.mainScene score]];
-    
     // Shares score to Facebook
     // If the user is logged in to Facebook
     if ([MGWU isFacebookActive])
     {
         // Create a new facebook share post
-        [MGWU shareWithTitle:@"I Really Do Hate Birds" caption:highScorePost andDescription:@"Think you can kill more birds than me?"];
+        [MGWU shareWithTitle:@"Playing #IHateBirds" caption:highScorePost andDescription:@"Think you hate birds more than me?"];
         
         // Log facebook shares
         [MGWU logEvent:@"shared_to_facebook"];
@@ -189,7 +193,7 @@
         [MGWU loginToFacebook];
         
         // Create a new facebook share post
-        [MGWU shareWithTitle:@"I Really Do Hate Birds" caption:highScorePost andDescription:@"Think you can kill more birds than me?"];
+        [MGWU shareWithTitle:@"Playing #IHateBirds" caption:highScorePost andDescription:@"Think you hate birds more than me?"];
         
         // Log facebook shares
         [MGWU logEvent:@"shared_to_facebook"];
