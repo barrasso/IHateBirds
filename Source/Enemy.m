@@ -170,9 +170,9 @@ static const NSInteger STARTING_POINT_VALUE = 3;
 - (void)spawnInTutorialLocation{
   self.isTutorialVersion = TRUE;
   
-  self.anchorPoint = ccp(0.5, 0.5);
+  self.anchorPoint = ccp(0.5,0.5);
   self.positionType = CCPositionTypeNormalized;
-  self.position = ccp(0.53, 0.70);
+  self.position = ccp(0.55,0.65);
 }
 
 # pragma mark - Colors

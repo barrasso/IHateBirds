@@ -82,14 +82,24 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     // Set Collision delegate
     _physicsNode.collisionDelegate = self;
     
-    // NSUSer Defaults
+    // NSUSer Defaults for Mute State
     muteState = [[[NSUserDefaults standardUserDefaults] objectForKey:@"muteState"] intValue];
     [[NSUserDefaults standardUserDefaults] synchronize];
     
+    // If mute state is 0, play music
     if (muteState == 0)
+    {
+        // Unmute
+        [OALSimpleAudio sharedInstance].muted = NO;
         _muteButton.selected = NO;
+    }
+    // If mute state is 1, mute music
     else if (muteState == 1)
+    {
+        // Mute
+        [OALSimpleAudio sharedInstance].muted = YES;
         _muteButton.selected = YES;
+    }
 }
 
 - (void)onEnter
