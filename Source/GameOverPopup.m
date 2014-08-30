@@ -119,7 +119,7 @@
     _accuracyLabel.string = [NSString stringWithFormat:@"%0.1f%% Hit",(float)[self.mainScene dartsHit]/[self.mainScene totalDarts] * 100.f];
     
     // Calculate bonus points
-    NSInteger bonusPoints = ([self.mainScene multiKills]+[self.mainScene pinKills] * 10);
+    NSInteger bonusPoints = ([self.mainScene multiKills]+[self.mainScene pinKills] * 11);
     _bonusLabel.string = [NSString stringWithFormat:@"+%ld Bonus",(long)bonusPoints];
     
     // Change current score string

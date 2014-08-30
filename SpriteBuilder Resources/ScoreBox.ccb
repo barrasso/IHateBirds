@@ -432,8 +432,6 @@
 						</array>
 					</dict>
 				</array>
-				<key>selected</key>
-				<true/>
 				<key>seqExpanded</key>
 				<true/>
 			</dict>
@@ -649,7 +647,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>25</real>
+							<real>22</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -981,7 +979,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>25</real>
+							<real>22</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1313,7 +1311,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>25</real>
+							<real>22</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1645,7 +1643,7 @@
 						<string>FloatScale</string>
 						<key>value</key>
 						<array>
-							<real>25</real>
+							<real>22</real>
 							<integer>0</integer>
 						</array>
 					</dict>
@@ -1987,7 +1985,7 @@
 								<string>FloatScale</string>
 								<key>value</key>
 								<array>
-									<real>20</real>
+									<real>22</real>
 									<integer>0</integer>
 								</array>
 							</dict>
@@ -2104,6 +2102,8 @@
 								</array>
 							</dict>
 						</array>
+						<key>selected</key>
+						<true/>
 					</dict>
 					<dict>
 						<key>UUID</key>
