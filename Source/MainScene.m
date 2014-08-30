@@ -186,11 +186,84 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
       
         // Wave 4
         // After 60 seconds, spawn 5 stupid birds
-        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 3) && (self.currentEnemyCount >= 0) && (_timer > 60.f))
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 3) && (self.currentEnemyCount >= 0) && (_timer > 60.f) && (_timer < 80.f))
         {
             // Set wave number
             waveNumber = 4;
         
+            // Continue spawning enemies
+            [self spawnEnemy];
+        }
+        
+        // Post wave 4 pause
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 3) && (self.currentEnemyCount >= 0) && (_timer > 80.f) && (_timer < 90.f))
+        {
+            // Set wave number
+            waveNumber = 0;
+        }
+        
+        // Wave 5
+        // After 90 seconds, spawn 6 stupid birds
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 4) && (self.currentEnemyCount >= 0) && (_timer > 90.f) && (_timer < 110.f))
+        {
+            // Set wave number
+            waveNumber = 5;
+            
+            // Continue spawning enemies
+            [self spawnEnemy];
+        }
+        
+        // Wave 6
+        // After 110 seconds, spawn 7 stupid birds
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 5) && (self.currentEnemyCount >= 0) && (_timer > 110.f) && (_timer < 130.f))
+        {
+            // Set wave number
+            waveNumber = 6;
+            
+            // Continue spawning enemies
+            [self spawnEnemy];
+        }
+        
+        // Wave 7
+        // After 130 seconds, spawn 8 stupid birds
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 6) && (self.currentEnemyCount >= 0) && (_timer > 130.f) && (_timer < 150.f))
+        {
+            // Set wave number
+            waveNumber = 7;
+            
+            // Continue spawning enemies
+            [self spawnEnemy];
+        }
+        
+        // Wave 8
+        // After 150 seconds, spawn 9 stupid birds
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 7) && (self.currentEnemyCount >= 0) && (_timer > 150.f) && (_timer < 170.f))
+        {
+            // Set wave number
+            waveNumber = 8;
+            
+            // Continue spawning enemies
+            [self spawnEnemy];
+        }
+        
+        // Wave 9
+        // After 170 seconds, spawn 10 stupid birds
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 8) && (self.currentEnemyCount >= 0) && (_timer > 170.f) && (_timer < 190.f))
+        {
+            // Set wave number
+            waveNumber = 9;
+            
+            // Continue spawning enemies
+            [self spawnEnemy];
+        }
+        
+        // Wave 10
+        // After 190 seconds, spawn 11 stupid birds
+        else if ((self.currentEnemyCount < TOTAL_SIMULTANEOUS_ENEMIES + 9) && (self.currentEnemyCount >= 0) && (_timer > 190.f))
+        {
+            // Set wave number
+            waveNumber = 10;
+            
             // Continue spawning enemies
             [self spawnEnemy];
         }
@@ -267,6 +340,137 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
                 _waveLabel.visible = FALSE;
             } delay:3.0f];
         
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+    
+        // GET READY pause after wave 4
+        else if (waveNumber == 0 && _timer > 80.f && _timer < 90.f)
+        {
+            // Set wave label
+            _waveLabel.string = @"Get Ready";
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:3.0f];
+            
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+    
+        else if (waveNumber == 5 && _timer < 91.f)
+        {
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:3.0f];
+            
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+    
+        else if (waveNumber == 6 && _timer < 111.f)
+        {
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:5.0f];
+            
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+    
+        else if (waveNumber == 7 && _timer < 131.f)
+        {
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:5.0f];
+            
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+        else if (waveNumber == 8 && _timer < 151.f)
+        {
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:5.0f];
+            
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+        else if (waveNumber == 9 && _timer < 171.f)
+        {
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:5.0f];
+            
+            // Set wave number to 0 on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                waveNumber = 0;
+            } delay:0.1f];
+        }
+        else if (waveNumber == 10 && _timer < 191.f)
+        {
+            // Set wave label
+            _waveLabel.string = [NSString stringWithFormat:@"Wave %i",waveNumber];
+            
+            // Set tutorial to be visible
+            _waveLabel.visible = TRUE;
+            
+            // Set invisible on timer
+            [self scheduleBlock:^(CCTimer *timer) {
+                _waveLabel.visible = FALSE;
+            } delay:5.0f];
+            
             // Set wave number to 0 on timer
             [self scheduleBlock:^(CCTimer *timer) {
                 waveNumber = 0;
@@ -489,7 +693,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
     [_physicsNode addChild: enemy];
   
     // Apply force to enemy
-    CGPoint force = ccpMult(forceDirection, 6000);
+    CGPoint force = ccpMult(forceDirection, 5000);
     [enemy.physicsBody applyForce:force];
 }
 
