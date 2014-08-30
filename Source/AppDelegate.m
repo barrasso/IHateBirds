@@ -97,7 +97,7 @@
     [[OALSimpleAudio sharedInstance] playBg:@"birds-ambience.wav" volume:2.0f pan:0 loop:YES];
     
     // Background music
-    [[OALSimpleAudio sharedInstance] playBg:@"wah.mp3" volume:0.4f pan:0 loop:YES];
+    [[OALSimpleAudio sharedInstance] playBg:@"bgmusic-birds.mp3" volume:0.5f pan:0 loop:YES];
     
     // Load MainScne
     return [CCBReader loadAsScene:@"MainScene"];
