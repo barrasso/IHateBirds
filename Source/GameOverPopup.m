@@ -16,8 +16,7 @@
     CCLabelTTF *_currentScore;
     CCLabelTTF *_highScoreLabel;
     CCLabelTTF *_newHighScoreLabel;
-    CCLabelTTF *_multiKillsLabel;
-    CCLabelTTF *_pinKillsLabel;
+    CCLabelTTF *_bonusKillsLabel;
     CCLabelTTF *_accuracyLabel;
     CCLabelTTF *_bonusLabel;
     
@@ -59,26 +58,29 @@
     NSNumber *gameScore = [NSNumber numberWithFloat:[self.mainScene score]];
     NSNumber *mks = [NSNumber numberWithFloat:[self.mainScene multiKills]];
     NSNumber *pks = [NSNumber numberWithFloat:[self.mainScene pinKills]];
-    NSDictionary *userStats = [[NSDictionary alloc] initWithObjectsAndKeys:gameScore,@"score", mks, @"multi kills", pks, @"pin kills", nil];
+    NSNumber *accuracy = [NSNumber numberWithFloat:([self.mainScene dartsHit]/[self.mainScene totalDarts])];
+    NSDictionary *userStats = [[NSDictionary alloc] initWithObjectsAndKeys:gameScore,@"score", mks, @"multi kills", pks, @"pin kills", accuracy, @"accuracy", nil];
     
     // Log user scores
     [MGWU logEvent:@"game_complete_with_stats" withParams:userStats];
 }
 
-# pragma mark - Scores
+#pragma mark - Scores
 
 - (BOOL)isNewRecord:(NSString *)categoryName
 {
     // Grab record from high score userdefaults
     float record = [[NSUserDefaults standardUserDefaults] floatForKey:categoryName];
     
+    float bonusValue = ([self.mainScene multiKills]+[self.mainScene pinKills] * 11);
+    
     // Grab current score from gameplay
     float currentScore = [[self.mainScene valueForKey:categoryName] floatValue];
   
     // If current score is greater then the record, set it as the new record
-    if (currentScore > record) {
+    if ((currentScore+bonusValue) > record) {
       // set new highscore in NSUserDefaults
-      [[NSUserDefaults standardUserDefaults] setFloat:currentScore forKey:categoryName];
+      [[NSUserDefaults standardUserDefaults] setFloat:(currentScore+bonusValue) forKey:categoryName];
       [[NSUserDefaults standardUserDefaults] synchronize];
       return TRUE;
     }   else {
@@ -112,9 +114,7 @@
     _scoreBox.position = ccp(0.5, 0.5);
     
     // Update multikill and pin kill labels
-    _multiKillsLabel.string = [NSString stringWithFormat:@"MK: %ld",(long)[self.mainScene multiKills]];
-    _pinKillsLabel.string = [NSString stringWithFormat:@"PK: %ld",(long)[self.mainScene pinKills]];
-    
+    _bonusKillsLabel.string = [NSString stringWithFormat:@"%ld",(long)([self.mainScene multiKills] + [self.mainScene pinKills])];
     // Calculate accuracy and update label as percent
     _accuracyLabel.string = [NSString stringWithFormat:@"%0.1f%% Hit",(float)[self.mainScene dartsHit]/[self.mainScene totalDarts] * 100.f];
     

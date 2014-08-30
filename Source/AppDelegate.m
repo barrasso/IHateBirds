@@ -87,17 +87,17 @@
 
 - (CCScene*) startScene
 {
-    // Background ambience
-    [[OALSimpleAudio sharedInstance] playBg:@"birds-ambience.wav" volume:2.0f pan:0 loop:YES];
-    
-    // Background music
-    [[OALSimpleAudio sharedInstance] playBg:@"wah.mp3" volume:0.4f pan:0 loop:YES];
-    
     // Authenticate GameCenter User
     [[GCHelper sharedInstance] authenticateLocalUser];
     
     // Turn on tutorial mode
     [GameState sharedInstance].tutorialModeOn = TRUE;
+    
+    // Background ambience
+    [[OALSimpleAudio sharedInstance] playBg:@"birds-ambience.wav" volume:2.0f pan:0 loop:YES];
+    
+    // Background music
+    [[OALSimpleAudio sharedInstance] playBg:@"wah.mp3" volume:0.4f pan:0 loop:YES];
     
     // Load MainScne
     return [CCBReader loadAsScene:@"MainScene"];
