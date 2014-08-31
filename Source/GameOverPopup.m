@@ -54,6 +54,9 @@
     // Play wat sound
     [[OALSimpleAudio sharedInstance] playEffect:@"Wat.wav" volume:1.75f pitch:1.0f pan:1.0f loop:NO];
     
+    // Load Interstitial
+    [self.mainScene loadInterstitial];
+    
     // MGWU Analytics
     NSNumber *gameScore = [NSNumber numberWithFloat:[self.mainScene score]];
     NSNumber *mks = [NSNumber numberWithFloat:[self.mainScene multiKills]];

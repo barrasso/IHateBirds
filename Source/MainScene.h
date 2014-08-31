@@ -7,8 +7,9 @@
 //
 
 #import "CCNode.h"
+#import "GADInterstitial.h"
 
-@interface MainScene : CCNode <CCPhysicsCollisionDelegate>
+@interface MainScene : CCNode <CCPhysicsCollisionDelegate, GADInterstitialDelegate>
 
 // Current amount of enemies
 @property (nonatomic, assign) int currentEnemyCount;
@@ -33,6 +34,12 @@
 
 // Number of Pin Kills
 @property (nonatomic, assign) NSInteger pinKills;
+
+// Interstitial
+@property (nonatomic, strong) GADInterstitial *interstitial;
+
+// Load Ad
+- (void)loadInterstitial;
 
 // End game
 - (void)gameOver;

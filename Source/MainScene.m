@@ -818,7 +818,7 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 - (void)loadBloodyExplosion:(CCNode *)enemy
 {
     // Play dead bird sound
-    [[OALSimpleAudio sharedInstance] playEffect:@"dead_bird.m4a" volume:0.8f pitch:1.0f pan:1.0f loop:NO];
+    [[OALSimpleAudio sharedInstance] playEffect:@"dead_bird.m4a" volume:0.25f pitch:1.0f pan:1.0f loop:NO];
     
     // Load the bloody effect
     CCNode *bloodExplosion = (CCNode *)[CCBReader load:@"BloodyExplosion"];
@@ -883,18 +883,18 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 
 #pragma mark - Ads
 
-//- (void)loadInterstitial
-//{
-//    // Load interstitial ads
-//    _interstitial = [[GADInterstitial alloc] init];
-//    _interstitial.adUnitID = @"ca-app-pub-6360908399010535/8481870209";
-//    [_interstitial loadRequest:[GADRequest request]];
-//    _interstitial.delegate = self;
-//}
-//
-//- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial
-//{
-//    [_interstitial presentFromRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
-//}
+- (void)loadInterstitial
+{
+    // Load interstitial ads
+    _interstitial = [[GADInterstitial alloc] init];
+    _interstitial.adUnitID = @"ca-app-pub-6360908399010535/7621122204";
+    [_interstitial loadRequest:[GADRequest request]];
+    _interstitial.delegate = self;
+}
+
+- (void)interstitialDidReceiveAd:(GADInterstitial *)interstitial
+{
+    [_interstitial presentFromRootViewController:[UIApplication sharedApplication].keyWindow.rootViewController];
+}
 
 @end
