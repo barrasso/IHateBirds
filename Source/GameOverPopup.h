@@ -11,6 +11,7 @@
 
 @interface GameOverPopup : CCNode
 
+// Score box Enum
 typedef NS_ENUM(NSInteger, CategoryName) {
   score,
   pps,
@@ -18,9 +19,13 @@ typedef NS_ENUM(NSInteger, CategoryName) {
   categoriesCount
 };
 
+// Main Scene
 @property (nonatomic, weak) MainScene *mainScene;
-// @property (nonatomic, strong) NSMutableDictionary *categoryNames;
+
+// Score box array
 @property (nonatomic, strong) NSMutableArray *scoreBoxes;
+
+// Current Category
 @property (nonatomic, assign) NSInteger currentCategoryIndex;
 
 @end
