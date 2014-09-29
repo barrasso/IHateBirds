@@ -1,0 +1,844 @@
+{
+    "assets": [
+        {
+            "asset": "../../../../../Applications/Xcode 2.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.0.sdk/ResourceRules.plist", 
+            "target": "ResourceRules.plist"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Landscape@2x~iphone.png", 
+            "target": "MGWUAboutFooter-Landscape@2x~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Landscape@2x~iphone.png", 
+            "target": "MGWUBackgroundDark-Landscape@2x~iphone.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/Settings.png", 
+            "target": "Settings.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwu-gk-notification@2x.png", 
+            "target": "mgwu-gk-notification@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/hipmobsend_field.png", 
+            "target": "hipmobsend_field.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/hipmob.back.btn.png", 
+            "target": "hipmob.back.btn.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwu-m@2x.png", 
+            "target": "mgwu-m@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/operator.connecting.png", 
+            "target": "operator.connecting.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/bluechatbubble.png", 
+            "target": "bluechatbubble.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Landscape~iphone.png", 
+            "target": "MGWUBackground-Landscape~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUClose@2x.png", 
+            "target": "MGWUClose@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuPlaceholderIcon.png", 
+            "target": "mgwuPlaceholderIcon.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBNoThanksButton@2x.png", 
+            "target": "FBNoThanksButton@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBLoginButtonPressed.png", 
+            "target": "FBLoginButtonPressed.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Landscape~iphone.png", 
+            "target": "MGWUAboutFooter-Landscape~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuPlaceholderIconDark@2x.png", 
+            "target": "mgwuPlaceholderIconDark@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuLogo@2x.png", 
+            "target": "mgwuLogo@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default@2x.png", 
+            "target": "Default@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad@2x.png", 
+            "target": "iPad@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/send-button-instate.png", 
+            "target": "send-button-instate.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad.png", 
+            "target": "iPad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/fb_connect.png", 
+            "target": "fb_connect.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUFacebookLoginLandscapeDark.nib", 
+            "target": "MGWUFacebookLoginLandscapeDark.nib"
+        }, 
+        {
+            "asset": "Source/Resources/bgmusic-birds.mp3", 
+            "target": "bgmusic-birds.mp3"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad-old@2x.png", 
+            "target": "iPad-old@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUClose.png", 
+            "target": "MGWUClose.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Landscape~ipad.png", 
+            "target": "MGWUBackgroundDark-Landscape~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Landscape~ipad.png", 
+            "target": "MGWUBackground-Landscape~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/grey-background.png", 
+            "target": "grey-background.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBLoginButtonPressed@2x.png", 
+            "target": "FBLoginButtonPressed@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FacebookIcon.png", 
+            "target": "FacebookIcon.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Portrait@2x~iphone.png", 
+            "target": "MGWUAboutFooter-Portrait@2x~iphone.png"
+        }, 
+        {
+            "asset": "Source/Resources/whip.wav", 
+            "target": "whip.wav"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Portrait@2x~ipad.png", 
+            "target": "MGWUBackground-Portrait@2x~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Portrait@2x~ipad.png", 
+            "target": "MGWUAboutFooter-Portrait@2x~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Portrait~iphone.png", 
+            "target": "MGWUBackground-Portrait~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/send-button-inactive.png", 
+            "target": "send-button-inactive.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone-old@2x.png", 
+            "target": "iPhone-old@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Portrait@2x~iphone.png", 
+            "target": "MGWUBackground-Portrait@2x~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/hipmobsend_field@2x.png", 
+            "target": "hipmobsend_field@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Landscape@2x~ipad.png", 
+            "target": "MGWUBackground-Landscape@2x~ipad.png"
+        }, 
+        {
+            "asset": "Source/Resources/Published-iOS", 
+            "target": "Published-iOS"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBNoThanksButtonPressed.png", 
+            "target": "FBNoThanksButtonPressed.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuPlaceholderIcon@2x.png", 
+            "target": "mgwuPlaceholderIcon@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBNoThanksButtonPressed@2x.png", 
+            "target": "FBNoThanksButtonPressed@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/CrossPromoViewController.nib", 
+            "target": "CrossPromoViewController.nib"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Portrait~iphone.png", 
+            "target": "MGWUBackgroundDark-Portrait~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuPlaceholderIconDark.png", 
+            "target": "mgwuPlaceholderIconDark.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/Settings@2x.png", 
+            "target": "Settings@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default-Landscape~ipad.png", 
+            "target": "Default-Landscape~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Portrait~ipad.png", 
+            "target": "MGWUBackground-Portrait~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBNoThanksButton.png", 
+            "target": "FBNoThanksButton.png"
+        }, 
+        {
+            "asset": "Source/Resources/Wat.wav", 
+            "target": "Wat.wav"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Portrait~ipad.png", 
+            "target": "MGWUBackgroundDark-Portrait~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/send-field-landscape.png", 
+            "target": "send-field-landscape.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBLoginButton@2x.png", 
+            "target": "FBLoginButton@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/operator.unavailable.png", 
+            "target": "operator.unavailable.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone-old.png", 
+            "target": "iPhone-old.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/aqua.png", 
+            "target": "aqua.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/operator.available.png", 
+            "target": "operator.available.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Portrait@2x~iphone.png", 
+            "target": "MGWUBackgroundDark-Portrait@2x~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwu-m.png", 
+            "target": "mgwu-m.png"
+        }, 
+        {
+            "asset": "Source/Resources/pop.mp3", 
+            "target": "pop.mp3"
+        }, 
+        {
+            "asset": "Source/Resources/button_click.wav", 
+            "target": "button_click.wav"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/green.png", 
+            "target": "green.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Landscape@2x~ipad.png", 
+            "target": "MGWUBackgroundDark-Landscape@2x~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackground-Landscape@2x~iphone.png", 
+            "target": "MGWUBackground-Landscape@2x~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Portrait~ipad.png", 
+            "target": "MGWUAboutFooter-Portrait~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Landscape~iphone.png", 
+            "target": "MGWUBackgroundDark-Landscape~iphone.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUFacebookLoginPortraitDark.nib", 
+            "target": "MGWUFacebookLoginPortraitDark.nib"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Landscape@2x~ipad.png", 
+            "target": "MGWUAboutFooter-Landscape@2x~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/FBLoginButton.png", 
+            "target": "FBLoginButton.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/send-button-active.png", 
+            "target": "send-button-active.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone.png", 
+            "target": "iPhone.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default-568h@2x.png", 
+            "target": "Default-568h@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/dead_bird.m4a", 
+            "target": "dead_bird.m4a"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Landscape-568h@2x~iphone.png", 
+            "target": "MGWUAboutFooter-Landscape-568h@2x~iphone.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPhone@2x.png", 
+            "target": "iPhone@2x.png"
+        }, 
+        {
+            "asset": "Source/Resources/Default.png", 
+            "target": "Default.png"
+        }, 
+        {
+            "asset": "Source/Resources/Icons/iPad-old.png", 
+            "target": "iPad-old.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuLogo.png", 
+            "target": "mgwuLogo.png"
+        }, 
+        {
+            "asset": "GoogleMobileAdsSdkiOS-6.11.1/README.txt", 
+            "target": "README.txt"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwu-gk-notification.png", 
+            "target": "mgwu-gk-notification.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuLogoDark@2x.png", 
+            "target": "mgwuLogoDark@2x.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUFacebookLoginLandscape.nib", 
+            "target": "MGWUFacebookLoginLandscape.nib"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/hipmob.send.png", 
+            "target": "hipmob.send.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Portrait~iphone.png", 
+            "target": "MGWUAboutFooter-Portrait~iphone.png"
+        }, 
+        {
+            "asset": "Source/Resources/birds-ambience.wav", 
+            "target": "birds-ambience.wav"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUBackgroundDark-Portrait@2x~ipad.png", 
+            "target": "MGWUBackgroundDark-Portrait@2x~ipad.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUFacebookLoginPortrait.nib", 
+            "target": "MGWUFacebookLoginPortrait.nib"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/mgwuLogoDark.png", 
+            "target": "mgwuLogoDark.png"
+        }, 
+        {
+            "asset": "mgwuSDK.embeddedframework/Resources/MGWUAboutFooter-Landscape~ipad.png", 
+            "target": "MGWUAboutFooter-Landscape~ipad.png"
+        }, 
+        {
+            "asset": "Images.xcassets", 
+            "target": null
+        }
+    ], 
+    "config": {
+        "APPLICATION_FULL_NAME": "I Hate Birds", 
+        "APPLICATION_IDENTIFIER": "com.mebproductions.ihatebirds", 
+        "APPLICATION_NAME": "IHateBirds", 
+        "LONG_VERSION": "1.0", 
+        "TEMPLATE_VALUES": {
+            "EXECUTABLE_NAME": "I Hate Birds", 
+            "PRODUCT_NAME": "I Hate Birds"
+        }, 
+        "URL_SCHEME": [
+            "fb1469788376614732", 
+            "fb1469788376614732"
+        ]
+    }, 
+    "defines": {
+        "NDEBUG": 1, 
+        "NS_BLOCK_ASSERTIONS": 1, 
+        "__IPHONE_OS_VERSION_MIN_REQUIRED": 50100
+    }, 
+    "deps": [
+        "UIKit", 
+        "StoreKit", 
+        "MessageUI", 
+        "CoreTelephony", 
+        "CoreGraphics", 
+        "AVFoundation", 
+        "AudioToolbox", 
+        "AdSupport", 
+        "SystemConfiguration", 
+        "mgwuSDK", 
+        "GLKit", 
+        "QuartzCore", 
+        "GameKit", 
+        "OpenGLES", 
+        "OpenAL", 
+        "UIKit", 
+        "Foundation", 
+        "CoreText"
+    ], 
+    "flags": [
+        "-fobjc-arc", 
+        "-fasm-blocks", 
+        {
+            "flag": "-std=gnu99", 
+            "not_type": "c++"
+        }, 
+        {
+            "flag": "-fgnu-keywords", 
+            "not_type": "c++"
+        }, 
+        "-fno-asm", 
+        "-fpascal-strings", 
+        "-Wempty-body", 
+        "-Wshorten-64-to-32", 
+        "-Wno-deprecated-declarations", 
+        "-Wreturn-type", 
+        "-Wswitch", 
+        "-Wparentheses", 
+        "-Wformat", 
+        "-Wuninitialized", 
+        "-Wunused-function", 
+        "-Wunused-value", 
+        "-Wunused-variable", 
+        {
+            "flag": "-Winvalid-offsetof", 
+            "type": "c++"
+        }, 
+        {
+            "flag": "-Wprotocol", 
+            "type": "objc"
+        }, 
+        {
+            "flag": "-Wundeclared-selector", 
+            "type": "objc"
+        }
+    ], 
+    "header_paths": [
+        {
+            "header_path": "I Hate Birds-generated-files.hmap", 
+            "hmap": {}, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "I Hate Birds-own-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "I Hate Birds-all-target-headers.hmap", 
+            "hmap": {}, 
+            "type": "I"
+        }, 
+        {
+            "header_path": "I Hate Birds-project-headers.hmap", 
+            "hmap": {
+                "AppDelegate.h": {
+                    "key": "AppDelegate.h", 
+                    "prefix": "Source/", 
+                    "suffix": "AppDelegate.h"
+                }, 
+                "CoordinateUtils.h": {
+                    "key": "CoordinateUtils.h", 
+                    "prefix": "Source/", 
+                    "suffix": "CoordinateUtils.h"
+                }, 
+                "DFPBannerView.h": {
+                    "key": "DFPBannerView.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "DFPBannerView.h"
+                }, 
+                "DFPExtras.h": {
+                    "key": "DFPExtras.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "DFPExtras.h"
+                }, 
+                "DFPInterstitial.h": {
+                    "key": "DFPInterstitial.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "DFPInterstitial.h"
+                }, 
+                "DFPSwipeableBannerView.h": {
+                    "key": "DFPSwipeableBannerView.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "DFPSwipeableBannerView.h"
+                }, 
+                "Dart.h": {
+                    "key": "Dart.h", 
+                    "prefix": "Source/", 
+                    "suffix": "Dart.h"
+                }, 
+                "Enemy.h": {
+                    "key": "Enemy.h", 
+                    "prefix": "Source/", 
+                    "suffix": "Enemy.h"
+                }, 
+                "GADAdMobExtras.h": {
+                    "key": "GADAdMobExtras.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADAdMobExtras.h"
+                }, 
+                "GADAdNetworkExtras.h": {
+                    "key": "GADAdNetworkExtras.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADAdNetworkExtras.h"
+                }, 
+                "GADAdSize.h": {
+                    "key": "GADAdSize.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADAdSize.h"
+                }, 
+                "GADAdSizeDelegate.h": {
+                    "key": "GADAdSizeDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "GADAdSizeDelegate.h"
+                }, 
+                "GADAppEventDelegate.h": {
+                    "key": "GADAppEventDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "GADAppEventDelegate.h"
+                }, 
+                "GADBannerView.h": {
+                    "key": "GADBannerView.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADBannerView.h"
+                }, 
+                "GADBannerViewDelegate.h": {
+                    "key": "GADBannerViewDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADBannerViewDelegate.h"
+                }, 
+                "GADCustomEventBanner.h": {
+                    "key": "GADCustomEventBanner.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Mediation/", 
+                    "suffix": "GADCustomEventBanner.h"
+                }, 
+                "GADCustomEventBannerDelegate.h": {
+                    "key": "GADCustomEventBannerDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Mediation/", 
+                    "suffix": "GADCustomEventBannerDelegate.h"
+                }, 
+                "GADCustomEventExtras.h": {
+                    "key": "GADCustomEventExtras.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Mediation/", 
+                    "suffix": "GADCustomEventExtras.h"
+                }, 
+                "GADCustomEventInterstitial.h": {
+                    "key": "GADCustomEventInterstitial.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Mediation/", 
+                    "suffix": "GADCustomEventInterstitial.h"
+                }, 
+                "GADCustomEventInterstitialDelegate.h": {
+                    "key": "GADCustomEventInterstitialDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Mediation/", 
+                    "suffix": "GADCustomEventInterstitialDelegate.h"
+                }, 
+                "GADCustomEventRequest.h": {
+                    "key": "GADCustomEventRequest.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Mediation/", 
+                    "suffix": "GADCustomEventRequest.h"
+                }, 
+                "GADInAppPurchase.h": {
+                    "key": "GADInAppPurchase.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADInAppPurchase.h"
+                }, 
+                "GADInAppPurchaseDelegate.h": {
+                    "key": "GADInAppPurchaseDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADInAppPurchaseDelegate.h"
+                }, 
+                "GADInterstitial.h": {
+                    "key": "GADInterstitial.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADInterstitial.h"
+                }, 
+                "GADInterstitialDelegate.h": {
+                    "key": "GADInterstitialDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADInterstitialDelegate.h"
+                }, 
+                "GADModules.h": {
+                    "key": "GADModules.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADModules.h"
+                }, 
+                "GADRequest.h": {
+                    "key": "GADRequest.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADRequest.h"
+                }, 
+                "GADRequestError.h": {
+                    "key": "GADRequestError.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/", 
+                    "suffix": "GADRequestError.h"
+                }, 
+                "GADSearchBannerView.h": {
+                    "key": "GADSearchBannerView.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Search/", 
+                    "suffix": "GADSearchBannerView.h"
+                }, 
+                "GADSearchRequest.h": {
+                    "key": "GADSearchRequest.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/Search/", 
+                    "suffix": "GADSearchRequest.h"
+                }, 
+                "GADSwipeableBannerViewDelegate.h": {
+                    "key": "GADSwipeableBannerViewDelegate.h", 
+                    "prefix": "GoogleMobileAdsSdkiOS-6.11.1/Add-ons/DoubleClick/", 
+                    "suffix": "GADSwipeableBannerViewDelegate.h"
+                }, 
+                "GCHelper.h": {
+                    "key": "GCHelper.h", 
+                    "prefix": "./", 
+                    "suffix": "GCHelper.h"
+                }, 
+                "GameOverPopup.h": {
+                    "key": "GameOverPopup.h", 
+                    "prefix": "Source/", 
+                    "suffix": "GameOverPopup.h"
+                }, 
+                "GameState.h": {
+                    "key": "GameState.h", 
+                    "prefix": "Source/", 
+                    "suffix": "GameState.h"
+                }, 
+                "MainScene.h": {
+                    "key": "MainScene.h", 
+                    "prefix": "Source/", 
+                    "suffix": "MainScene.h"
+                }, 
+                "PausePopup.h": {
+                    "key": "PausePopup.h", 
+                    "prefix": "Source/", 
+                    "suffix": "PausePopup.h"
+                }, 
+                "Prefix.pch": {
+                    "key": "Prefix.pch", 
+                    "prefix": "Source/", 
+                    "suffix": "Prefix.pch"
+                }
+            }, 
+            "type": "iquote"
+        }, 
+        {
+            "header_path": "/var/folders/w4/92z2fx511rq77tvvmgt6mgx40000gn/T/tmp2NLcnz/BUILT_PRODUCTS_DIR/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/kazmath/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Platforms", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Support", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Platforms/iOS", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d/Platforms/Mac", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/Chipmunk/objectivec/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/Chipmunk/include", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d-ui", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/cocos2d-ui/CCBReader", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/Actions", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/AudioTrack", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/OpenAL", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/Session", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "Source/libs/cocos2d-iphone/external/ObjectAL/Support", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/w4/92z2fx511rq77tvvmgt6mgx40000gn/T/tmp2NLcnz/DERIVED_FILE_DIR/armv7", 
+            "type": "I"
+        }, 
+        {
+            "header_path": "/var/folders/w4/92z2fx511rq77tvvmgt6mgx40000gn/T/tmp2NLcnz/DERIVED_FILE_DIR", 
+            "type": "I"
+        }
+    ], 
+    "infoplists": [
+        "./Source/Resources/Info.plist"
+    ], 
+    "libs": [
+        "z", 
+        "sqlite3", 
+        "z", 
+        "GoogleAdMobAds"
+    ], 
+    "modules": [
+        {
+            "build_cwd": "Source/libs/cocos2d-iphone", 
+            "project": "cocos2d-ios", 
+            "project_config": "Release", 
+            "target": "cocos2d"
+        }, 
+        {
+            "build_cwd": "Source/libs/cocos2d-iphone", 
+            "project": "Chipmunk7-ios", 
+            "project_config": "Release", 
+            "target": "ObjectiveChipmunk-iPhone"
+        }
+    ], 
+    "pchs": [
+        "./Source/Prefix.pch"
+    ], 
+    "sources": [
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "GCHelper.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/AppDelegate.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/CoordinateUtils.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/Dart.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/Enemy.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/GameOverPopup.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/GameState.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/MainScene.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/PausePopup.m"
+        }, 
+        {
+            "defines": {}, 
+            "flags": [], 
+            "header_paths": [], 
+            "language": "objc", 
+            "source": "Source/main.m"
+        }
+    ], 
+    "storyboards": [], 
+    "type": "app", 
+    "version": "3", 
+    "xcdatamodels": [], 
+    "xcode_project": "FirstGame.xcodeproj", 
+    "xibs": []
+}
