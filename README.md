@@ -1,6 +1,10 @@
 I Hate Birds
 ==========
 
+iTunes Link: https://itunes.apple.com/ca/app/i-hate-birds/id913230912?mt=8
+
+Challenge Post: http://challengepost.com/software/ihatebirds
+
 I Hate Birds is a mobile game built for iOS and Android devices. It is a stress relieving game that tests your swiping stamina, accuracy and hatred for birds.
 
 The birds come in waves, and eventually the waves become increasingly more difficult. However, that means more birds to kill (yay).
