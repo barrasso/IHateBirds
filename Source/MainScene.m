@@ -532,13 +532,13 @@ static const int TOTAL_SIMULTANEOUS_ENEMIES = 2;
 
 #pragma mark - Touch events
 
-- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchBegan:(CCTouch *)touch withEvent:(UIEvent *)event
 {
     // Get starting location of touch
     _startTouchLocation = [touch locationInNode:self];
 }
 
-- (void)touchEnded:(UITouch *)touch withEvent:(UIEvent *)event
+- (void)touchEnded:(CCTouch *)touch withEvent:(UIEvent *)event
 {
     // Set end location of touch
     CGPoint endLocation = [touch locationInNode:self];

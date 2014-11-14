@@ -99,12 +99,12 @@ static GCHelper *sharedHelper = nil;
     GKGameCenterViewController *gameCenterController = [[GKGameCenterViewController alloc] init];
     gameCenterController.gameCenterDelegate = self;
     gameCenterController.leaderboardIdentifier = @"IHateBirdsLB";
-    gameCenterController.viewState = GKGameCenterViewControllerStateDefault;
+    gameCenterController.viewState = GKGameCenterViewControllerStateLeaderboards;
 
     if (gameCenterController != nil)
     {
         AppController *delegate = (AppController *)[[UIApplication sharedApplication] delegate];
-        [delegate.navController presentModalViewController:gameCenterController animated:YES];
+        [delegate.navController presentViewController:gameCenterController animated:YES completion:nil];
     }
 }
 

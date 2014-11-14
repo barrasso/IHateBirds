@@ -130,10 +130,10 @@
     _bonusLabel.string = [NSString stringWithFormat:@"+%ld Bonus",(long)bonusPoints];
     
     // Change current score string
-    _currentScore.string = [NSString stringWithFormat:@"%d", ([self.mainScene score] + bonusPoints)];
+    _currentScore.string = [NSString stringWithFormat:@"%ld", ([self.mainScene score] + bonusPoints)];
     
     // High score post
-    highScorePost = [NSString stringWithFormat:@"Just scored %d!",([self.mainScene score] + bonusPoints)];
+    highScorePost = [NSString stringWithFormat:@"Just scored %ld!",([self.mainScene score] + bonusPoints)];
     
     // Show high score label if new high score
     if ([self isNewRecord:category]) {
